@@ -6,10 +6,13 @@ System.out.println("enter a number");
 int number=sc.nextInt();
 System.out.println("enter a second number");
 int number2=sc.nextInt();
+System.out.println("enter a third number");
+int number3=sc.nextInt();
 //oddeven(number);
 //naturalnumber(number);
 //sumofrangenumber(number, number2);
-findgreatestnumber(number, number2);
+//findgreatestnumber(number, number2);
+findgreatestnumberinthree(number, number2, number3);
  
     }
      //program for to check the number is even or odd
@@ -66,6 +69,19 @@ findgreatestnumber(number, number2);
             System.out.println(number1+" is greater than "+number);
         }
     }
+    //program for find a greatest number in among three number
+    public static void findgreatestnumberinthree(int number,int number1,int number2){
+        if(number>number1 && number>number2){
+            System.out.println(number+" is greater than "+number1+" and "+number2);
+        }
+        else if(number1>number && number1>number2){
+            System.out.println(number1+" is greater than "+number+ " and "+number2);
+        }
+        else{
+            System.out.println(number2+" is greater than "+number1+ " and "+number); 
+        }
+
+    } 
     
 
 }
