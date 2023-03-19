@@ -1,5 +1,5 @@
 import java.util.*;
-class posneg{
+class preinsta1{
     public static void main(String args[]) {
 Scanner sc=new Scanner(System.in);
 System.out.println("enter a number");
@@ -37,12 +37,13 @@ naturalnumber(number);
     //Program for sum of natural number
     public static int naturalnumber(int number) {
         int sum =0;
-        for (int i=0;i<number;i++){
+        for (int i=1;i<=number;i++){
             sum+=i;
         }
         System.out.println( sum);
         return sum;
         
     }
+    
 
 }
