@@ -8,7 +8,8 @@ System.out.println("enter a second number");
 int number2=sc.nextInt();
 //oddeven(number);
 //naturalnumber(number);
-sumofrangenumber(number, number2);
+//sumofrangenumber(number, number2);
+findgreatestnumber(number, number2);
  
     }
      //program for to check the number is even or odd
@@ -55,6 +56,15 @@ sumofrangenumber(number, number2);
         }
         System.out.println(sum);
         
+    }
+    //progrm for find out a greatest number in between two numbers
+    public static void findgreatestnumber(int number,int number1){
+        if(number>number1){
+            System.out.println(number+" is greater than "+number1);
+        }
+        else{
+            System.out.println(number1+" is greater than "+number);
+        }
     }
     
 
