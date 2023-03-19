@@ -4,15 +4,18 @@ class preinsta1{
 Scanner sc=new Scanner(System.in);
 System.out.println("enter a number");
 int number=sc.nextInt();
-System.out.println("enter a second number");
-int number2=sc.nextInt();
-System.out.println("enter a third number");
-int number3=sc.nextInt();
+// System.out.println("enter a second number");
+// int number2=sc.nextInt();
+// System.out.println("enter a third number");
+// int number3=sc.nextInt();
 //oddeven(number);
 //naturalnumber(number);
 //sumofrangenumber(number, number2);
 //findgreatestnumber(number, number2);
-findgreatestnumberinthree(number, number2, number3);
+// findgreatestnumberinthree(number, number2, number3);
+//leapyearornot(number);
+primeornot(number);
+
  
     }
      //program for to check the number is even or odd
@@ -82,6 +85,40 @@ findgreatestnumberinthree(number, number2, number3);
         }
 
     } 
-    
+    //program for leap  year or not 
+    public static void leapyearornot(int number){
+        if(number%4==0 || number%400==0){
+            System.out.println("the given year is leap year");
 
+        }
+        else{
+            System.out.println("the given year is not leap year");
+
+        }
+    }
+    //program for prime number or not
+    public static boolean primeornot(int number){
+        int count=0;
+        if(number==0 || number==1){
+            System.out.println("not prime");
+            return true;
+        }
+        else{
+            for(int i=2;i<number;i++){
+                if(number%2==0){
+                count++;
+                }
+            }
+
+        }
+        if(count>0){
+            System.out.println(" not prime");
+            return false;
+
+        }
+        else{
+            System.out.println("prime");
+            return true;
+        }
+}
 }
