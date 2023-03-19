@@ -4,8 +4,11 @@ class preinsta1{
 Scanner sc=new Scanner(System.in);
 System.out.println("enter a number");
 int number=sc.nextInt();
+System.out.println("enter a second number");
+int number2=sc.nextInt();
 //oddeven(number);
-naturalnumber(number);
+//naturalnumber(number);
+sumofrangenumber(number, number2);
  
     }
      //program for to check the number is even or odd
@@ -42,6 +45,15 @@ naturalnumber(number);
         }
         System.out.println( sum);
         return sum;
+        
+    }
+    //program for Sum of the Numbers in a Given Range in Java
+    public static void sumofrangenumber(int number,int number1) {
+        int sum=0;
+        for(int i=number; i<=number1;i++){
+            sum=i+sum;
+        }
+        System.out.println(sum);
         
     }
     
