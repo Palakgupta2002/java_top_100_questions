@@ -4,8 +4,8 @@ class preinsta1{
 Scanner sc=new Scanner(System.in);
 System.out.println("enter a number");
 int number=sc.nextInt();
- System.out.println("enter a second number");
- int number2=sc.nextInt();
+//  System.out.println("enter a second number");
+//  int number2=sc.nextInt();
 // System.out.println("enter a third number");
 // int number3=sc.nextInt();
 //oddeven(number);
@@ -15,7 +15,8 @@ int number=sc.nextInt();
 // findgreatestnumberinthree(number, number2, number3);
 //leapyearornot(number);
 // primeornot(number);
-rangeofprimenumber(number,  number2);
+// rangeofprimenumber(number,  number2);
+sumofdigits(number);
  
     }
      //program for to check the number is even or odd
@@ -127,6 +128,17 @@ public static void rangeofprimenumber(int number, int number1){
         if (primeornot (i)==true)
         System.out.println (i);
     }
+}
+public static void sumofdigits(int number){
+    int sum=0;
+    int res=0;
+    while(number!=0){
+        res=number%10;
+        sum=sum+res;
+        number=number/10;
+    }
+    System.out.println(sum);
+
 }
 
 }
