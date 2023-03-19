@@ -4,8 +4,8 @@ class preinsta1{
 Scanner sc=new Scanner(System.in);
 System.out.println("enter a number");
 int number=sc.nextInt();
-// System.out.println("enter a second number");
-// int number2=sc.nextInt();
+ System.out.println("enter a second number");
+ int number2=sc.nextInt();
 // System.out.println("enter a third number");
 // int number3=sc.nextInt();
 //oddeven(number);
@@ -14,8 +14,8 @@ int number=sc.nextInt();
 //findgreatestnumber(number, number2);
 // findgreatestnumberinthree(number, number2, number3);
 //leapyearornot(number);
-primeornot(number);
-
+// primeornot(number);
+rangeofprimenumber(number,  number2);
  
     }
      //program for to check the number is even or odd
@@ -100,25 +100,33 @@ primeornot(number);
     public static boolean primeornot(int number){
         int count=0;
         if(number==0 || number==1){
-            System.out.println("not prime");
+           // System.out.println("not prime");
             return true;
         }
         else{
             for(int i=2;i<number;i++){
-                if(number%2==0){
+                if(number%i==0){
                 count++;
                 }
             }
 
         }
         if(count>0){
-            System.out.println(" not prime");
+            //System.out.println(" not prime");
             return false;
 
         }
         else{
-            System.out.println("prime");
+           // System.out.println("prime");
             return true;
         }
 }
+//Program for finding a range of prime
+public static void rangeofprimenumber(int number, int number1){
+    for(int i=number;i<number1;i++){
+        if (primeornot (i)==true)
+        System.out.println (i);
+    }
+}
+
 }
