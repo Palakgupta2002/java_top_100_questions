@@ -17,7 +17,8 @@ int number=sc.nextInt();
 // primeornot(number);
 // rangeofprimenumber(number,  number2);
 // sumofdigits(number);
-reversenumber( number);
+//reversenumber( number);
+palindrom(number);
  
     }
      //program for to check the number is even or odd
@@ -142,7 +143,7 @@ public static void sumofdigits(int number){
 
 }
 //program for a reverse number
- public static void reversenumber(int number) {
+ public static int reversenumber(int number) {
     int reverse=0;
     int rem;
     while(number!=0){
@@ -150,7 +151,18 @@ public static void sumofdigits(int number){
         reverse=reverse*10+rem;
         number/=10;
     }
-    System.out.print("the reverse no is "+reverse);
+    //System.out.print("the reverse no is "+reverse);
+    return reverse;
+    
+}
+//program for palindrom number
+public static void palindrom(int number) {
+    if( reversenumber(number)==number){
+        System.out.println("the number is palindrom");
+    }
+    else{
+        System.out.println("the number is not a palindrom number");
+    }
     
 }
 
