@@ -18,7 +18,8 @@ int number=sc.nextInt();
 // rangeofprimenumber(number,  number2);
 // sumofdigits(number);
 //reversenumber( number);
-palindrom(number);
+//palindrom(number);
+armstrong(number);
  
     }
      //program for to check the number is even or odd
@@ -164,6 +165,50 @@ public static void palindrom(int number) {
         System.out.println("the number is not a palindrom number");
     }
     
+}
+
+public static int order(int number) {
+    int count=0;
+    while(number!=0){
+        count++;
+        number/=number;
+       
+    }
+    return count;   
+}
+//this a helper subprogram to giving a result of a number
+public static int isarmstrong(int num, int len)  {
+    int sum = 0, temp, digit;
+    temp = num;
+
+    // loop to extract digit, find power & add to sum
+    while (temp != 0)
+      {
+	// extract digit
+	digit = temp % 10;
+
+	// add power to sum
+	sum = sum + (int)Math.pow(digit, len);
+	temp /= 10;
+    
+
+      }
+    return sum;
+    
+}
+//program for armstrong
+public static void armstrong(int number){
+    int len;
+    //this order function is for to find out a order of number
+    len=order(number);
+    System.out.print(len);
+    if(isarmstrong(number,len)==number){
+        System.out.println("the number is a armstrong");
+    }
+    else{
+        System.out.println("the number is not a armstrong number");
+    }
+  System.out.println("hello");  
 }
 
 }
