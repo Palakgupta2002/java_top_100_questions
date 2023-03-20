@@ -16,7 +16,8 @@ int number=sc.nextInt();
 //leapyearornot(number);
 // primeornot(number);
 // rangeofprimenumber(number,  number2);
-sumofdigits(number);
+// sumofdigits(number);
+reversenumber( number);
  
     }
      //program for to check the number is even or odd
@@ -139,6 +140,18 @@ public static void sumofdigits(int number){
     }
     System.out.println(sum);
 
+}
+//program for a reverse number
+ public static void reversenumber(int number) {
+    int reverse=0;
+    int rem;
+    while(number!=0){
+        rem=number%10;
+        reverse=reverse*10+rem;
+        number/=10;
+    }
+    System.out.print("the reverse no is "+reverse);
+    
 }
 
 }
