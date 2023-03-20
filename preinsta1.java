@@ -4,8 +4,8 @@ class preinsta1{
 Scanner sc=new Scanner(System.in);
 System.out.println("enter a number");
 int number=sc.nextInt();
-//  System.out.println("enter a second number");
-//  int number2=sc.nextInt();
+ System.out.println("enter a second number");
+  int number2=sc.nextInt();
 // System.out.println("enter a third number");
 // int number3=sc.nextInt();
 //oddeven(number);
@@ -16,10 +16,11 @@ int number=sc.nextInt();
 //leapyearornot(number);
 // primeornot(number);
 // rangeofprimenumber(number,  number2);
-// sumofdigits(number);
+//  sumofdigits(number);
 //reversenumber( number);
 //palindrom(number);
-armstrong(number);
+//armstrong(number);
+rangeofarmstong(number, number2);
  
     }
      //program for to check the number is even or odd
@@ -171,13 +172,19 @@ public static int order(int number) {
     int count=0;
     while(number!=0){
         count++;
-        number/=number;
+        number/=10;
        
     }
+    
     return count;   
 }
 //this a helper subprogram to giving a result of a number
-public static int isarmstrong(int num, int len)  {
+//program for armstrong
+public static void armstrong(int num){
+    int len;
+    //this order function is for to find out a order of number
+    len=order(num);
+    System.out.print(len);
     int sum = 0, temp, digit;
     temp = num;
 
@@ -193,22 +200,32 @@ public static int isarmstrong(int num, int len)  {
     
 
       }
-    return sum;
+   if(sum==num){
+    System.out.println("the given number is armstong");
+
+   }
+   else{
+    System.out.println("the given number is  not armstong");
+
+
+   }
     
 }
-//program for armstrong
-public static void armstrong(int number){
-    int len;
-    //this order function is for to find out a order of number
-    len=order(number);
-    System.out.print(len);
-    if(isarmstrong(number,len)==number){
-        System.out.println("the number is a armstrong");
+//program to find out a range of armstong
+public static void rangeofarmstong(int lowrangenumber,int highrangenumber) {
+    for(int i= lowrangenumber;i<=highrangenumber;i++){
+       System.out.print(i);
+       armstrong(i);
+       
     }
-    else{
-        System.out.println("the number is not a armstrong number");
-    }
-  System.out.println("hello");  
+    
 }
+//program for Fibonacci series 
+public static void Fibonacci(int number) {
+    
+    
+    
+}
+
 
 }
