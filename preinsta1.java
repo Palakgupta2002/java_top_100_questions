@@ -4,8 +4,8 @@ class preinsta1{
 Scanner sc=new Scanner(System.in);
 System.out.println("enter a number");
 int number=sc.nextInt();
- System.out.println("enter a second number");
-  int number2=sc.nextInt();
+//  System.out.println("enter a second number");
+//   int number2=sc.nextInt();
 // System.out.println("enter a third number");
 // int number3=sc.nextInt();
 //oddeven(number);
@@ -24,7 +24,10 @@ int number=sc.nextInt();
 // Fibonacci(number);
 // factorial(number);
 // System.out.println(recurrsionfact(number));
-System.out.println(power(number, number2));
+// System.out.println(power(number, number2));
+// 
+// strongnumber(number);
+perfectnumber(number);
  
     }
      //program for to check the number is even or odd
@@ -273,6 +276,50 @@ public static int power(int base,int power){
         return base*power(base,power-1);
     }
 }
+//program for find out a factor 
+public static void factor(int number){
+    for(int i=1;i<number;i++){
+        if(number%i==0 && primeornot(number)==false){
+            System.out.print(i+" ");
+           
+        }
+    }
+}
+//Program for find strong number
+public static void strongnumber(int number){
+    int res=0;
+    int sum=0;
+    int number1=number;
+    while(number!=0){
+        res=number%10;
+       sum=sum+recurrsionfact(res);
+       number=number/10;
+    }
+       if(number1==sum){
+        System.out.println("It is strong number");
+    }
+    else{
+        System.out.println("It is not strong number"); 
+    }
+}
+//Program for find a perfect number
+public static void perfectnumber(int number) {
+    int sum=0;
+    for(int i=1;i<number;i++){
+        if(number%i==0){
+            sum=sum+i;
+        }
+
+    }
+    if(number==sum){
+        System.out.println("This is a perfect number");
+    }
+    else{
+        System.out.println("This is not a perfect number"); 
+    }
+    
+}
+
 
 
 }
