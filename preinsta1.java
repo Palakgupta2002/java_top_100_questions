@@ -4,8 +4,8 @@ class preinsta1{
 Scanner sc=new Scanner(System.in);
 System.out.println("enter a number");
 int number=sc.nextInt();
-//  System.out.println("enter a second number");
-//   int number2=sc.nextInt();
+ System.out.println("enter a second number");
+  int number2=sc.nextInt();
 // System.out.println("enter a third number");
 // int number3=sc.nextInt();
 //oddeven(number);
@@ -23,7 +23,8 @@ int number=sc.nextInt();
 // rangeofarmstong(number, number2);
 // Fibonacci(number);
 // factorial(number);
-System.out.println(recurrsionfact(number));
+// System.out.println(recurrsionfact(number));
+System.out.println(power(number, number2));
  
     }
      //program for to check the number is even or odd
@@ -260,6 +261,16 @@ public static int recurrsionfact(int number){
     } 
     else{
         return number* recurrsionfact(number-1);
+    }
+}
+//power of a number
+public static int power(int base,int power){
+    //base condition
+    if(power==0){
+        return 1;
+    }
+    else{
+        return base*power(base,power-1);
     }
 }
 
