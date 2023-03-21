@@ -4,8 +4,8 @@ class preinsta1{
 Scanner sc=new Scanner(System.in);
 System.out.println("enter a number");
 int number=sc.nextInt();
-//  System.out.println("enter a second number");
-//   int number2=sc.nextInt();
+ System.out.println("enter a second number");
+  int number2=sc.nextInt();
 // System.out.println("enter a third number");
 // int number3=sc.nextInt();
 //oddeven(number);
@@ -27,8 +27,12 @@ int number=sc.nextInt();
 // System.out.println(power(number, number2));
 // 
 // strongnumber(number);
-perfectnumber(number);
- 
+// perfectnumber(number);
+//  automorphicnumber(number);
+// Harshadnumber(number);
+// Abundant(number);
+friendlypair(number, number2);
+
     }
      //program for to check the number is even or odd
 
@@ -320,8 +324,110 @@ public static void perfectnumber(int number) {
     
 }
 //automorphic number
+public static void automorphicnumber(int number){
+    int squre=number*number;
+    if(isAutomorphic(number) == 1)
+        System.out.println("Num: "+ number + ", Square: " + squre + " - is Automorphic");
+    else
+        System.out.println("Num: "+ number + ", Square: " + squre + " - is not Automorphic");
+	   
+		
+	}
+    public static int isAutomorphic(int n) {
+        int square = n * n;
+        while(n != 0)
+        {
+            // means not automorphic number
+            if(n % 10 != square % 10){
+                return 0;
+            }
+            // reduce down numbers
+            n /= 10;
+            square /= 10;
+        }
+        // if reaches here means automorphic number
+        return 1;
+      
+        
+    }
+    //Program for Harshad number or not
+    public static void Harshadnumber(int number){
+        int result=0;
+        int number1=number;
+
+        while(number!=0)
+        {
+            int pick_number=number%10;
+            result=result+pick_number;
+            number=number/10;
+        }
+        if(number1%result==0)
+        {
+            System.out.println("the number is a Harshadnumber");
+        }
+        else{
+            System.out.println("the number is not a Harshadnumber");
+
+        }
+
+        }
+        //Program for Abundant Number or not
+        public static void Abundant(int number) {
+            int result=0;
+        int number1=number;
+
+       for(int i=1;i<number;i++)
+       {
+        if(number%i==0){
+            result=result+i;
+        }
+       }
+        if(number1>result)
+        {
+            System.out.println("the number is not Abundant");
+        }
+        else{
+            System.out.println("the number is  Abundant");
+
+        }
+}
+//Program for a friendly pair
+public static void friendlypair(int number,int number2){
+    int result=0;
+    int number1=number;
+    int result2=0;
+    int number3=number2;
+
+   for(int i=1;i<number;i++)
+   {
+    if(number%i==0){
+        result=result+i;
+    }
+   }
 
 
+for(int i=1;i<number2;i++){
+    if(number2%i==0)
+    {
+        result2=result2+i;
+    }
+}
 
+
+if(result%result2==0){
+    System.out.println(" the both number are friendly pair ");
 
 }
+else{
+    System.out.println(" the both number are not friendly pair ");
+
+}
+}
+
+
+
+    } 
+
+
+
+
