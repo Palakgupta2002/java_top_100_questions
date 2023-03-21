@@ -4,8 +4,8 @@ class preinsta1{
 Scanner sc=new Scanner(System.in);
 System.out.println("enter a number");
 int number=sc.nextInt();
- System.out.println("enter a second number");
-  int number2=sc.nextInt();
+//  System.out.println("enter a second number");
+//   int number2=sc.nextInt();
 // System.out.println("enter a third number");
 // int number3=sc.nextInt();
 //oddeven(number);
@@ -20,7 +20,8 @@ int number=sc.nextInt();
 //reversenumber( number);
 //palindrom(number);
 //armstrong(number);
-rangeofarmstong(number, number2);
+// rangeofarmstong(number, number2);
+Fibonacci(number);
  
     }
      //program for to check the number is even or odd
@@ -184,7 +185,6 @@ public static void armstrong(int num){
     int len;
     //this order function is for to find out a order of number
     len=order(num);
-    System.out.print(len);
     int sum = 0, temp, digit;
     temp = num;
 
@@ -214,7 +214,7 @@ public static void armstrong(int num){
 //program to find out a range of armstong
 public static void rangeofarmstong(int lowrangenumber,int highrangenumber) {
     for(int i= lowrangenumber;i<=highrangenumber;i++){
-       System.out.print(i);
+       System.out.print(i+" ");
        armstrong(i);
        
     }
@@ -222,9 +222,17 @@ public static void rangeofarmstong(int lowrangenumber,int highrangenumber) {
 }
 //program for Fibonacci series 
 public static void Fibonacci(int number) {
-    
-    
-    
+    int a=0;
+    int b=1;
+    int c;
+    System.out.print(a +","+b);
+    for(int i=1;i<=number;i++){
+         c=a+b;
+         System.out.print(","+c);
+        a=b;
+        b=c;
+
+    }   
 }
 
 
