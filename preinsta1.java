@@ -319,6 +319,8 @@ public static void perfectnumber(int number) {
     }
     
 }
+//automorphic number
+
 
 
 
