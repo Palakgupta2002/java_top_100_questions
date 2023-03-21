@@ -21,7 +21,9 @@ int number=sc.nextInt();
 //palindrom(number);
 //armstrong(number);
 // rangeofarmstong(number, number2);
-Fibonacci(number);
+// Fibonacci(number);
+// factorial(number);
+System.out.println(recurrsionfact(number));
  
     }
      //program for to check the number is even or odd
@@ -233,6 +235,32 @@ public static void Fibonacci(int number) {
         b=c;
 
     }   
+}
+//program for a  find factorial number
+public static void factorial(int number){
+    int res=1;
+    //base condition
+    if(number==1 || number==0){
+        System.out.println(res+" the factorial of the number "+number);
+
+    }
+    else{
+        for(int i=1;i<=number;i++){
+            res=res*i;
+        }
+        System.out.println(res +" the factorial of the number "+number);
+    }
+
+}
+//now program of factorial is with the help of recurrsion
+public static int recurrsionfact(int number){
+    if( number==0){
+       return 1;
+
+    } 
+    else{
+        return number* recurrsionfact(number-1);
+    }
 }
 
 
