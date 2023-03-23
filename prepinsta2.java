@@ -14,6 +14,7 @@ public class prepinsta2 {
     // LCM(number, number1);
     // binarytodecimal(number);
     // octaltodecimal(number);
+    Hexadecimal(str);
 
     }
     //Program for find a H.C.F. 
@@ -69,6 +70,15 @@ public class prepinsta2 {
     }
     //Program for Hexadecimal to Decimal
     public static void Hexadecimal(String Hexdecimal) {
+        String digithex="0123456789ABCDEF";
+        int val=0;
+        for(int i=0;i<Hexdecimal.length();i++)
+        {
+            char c= Hexdecimal.charAt(i);
+            int d=digithex.indexOf(c);
+            val=val*16+d;
+        }
+        System.out.println("The conversion of hexadecimal form is "+val);
 
         
     }
