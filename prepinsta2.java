@@ -5,8 +5,8 @@ public class prepinsta2 {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter a number");
         int number = sc.nextInt();
-        // System.out.println("enter a second number");
-        // int number1=sc.nextInt();
+        System.out.println("enter a second number");
+        int number1=sc.nextInt();
         // System.out.print("enter a string");
         // String str=sc.nextLine();
         // HCF(number, number1);
@@ -19,7 +19,8 @@ public class prepinsta2 {
         // decimaltobinary(number);
         // DEcimaltooctal(214);
         // binarytooctal(number);
-        octaltobinary(number);
+        // octaltobinary(number);
+        findquadrant(number, number1);
     }
 
     // Program for find a H.C.F.
@@ -138,6 +139,32 @@ public class prepinsta2 {
             int decimal=octaltodecimal(number);
         decimaltobinary(decimal);
 
+            
+        }
+        //Java program to find out the quadrant in which the given co-ordinate lie
+        public static void findquadrant(int x,int y) {
+            if(x>0 && y>0){
+                System.out.println("The x and y is in first quadrant");
+            }
+            else if(x<0 && y>0){
+                System.out.println("The x and y is in second quadrant");  
+            }
+            else if(x<0 && y<0){
+                System.out.println("The x and y is in third quadrant");  
+            }
+            else if(x>0 && y<0){
+                System.out.println("The x and y is in fourth quadrant");  
+            }
+            else if(x==0 && y==0){
+                System.out.println("The number is a origin");  
+            }
+            else if(x==0 && y!=0){
+                System.out.println("y-axis");  
+            }
+            else if(x!=0 && y==0){
+                System.out.println("x-axis");  
+            }
+            
             
         }
 
