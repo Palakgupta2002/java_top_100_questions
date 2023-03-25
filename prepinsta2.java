@@ -17,6 +17,7 @@ public class prepinsta2 {
         // octaltodecimal(number);
         // Hexadecimal(str);
         // decimaltobinary(number);
+        DEcimaltooctal(214);
     }
 
     // Program for find a H.C.F.
@@ -99,6 +100,21 @@ public class prepinsta2 {
         for (int j = i - 1; j >= 0; j--) {
             System.out.print(binarynumber[j]);
             
+        }
+
+    }
+    //Program for Decimal to octal
+    public static void DEcimaltooctal(int number){
+        int octal[]=new int [20];
+        int i=0;
+        while(number>0){
+            octal[i]=number%8;
+            number=number/8;
+            i++;
+        }
+        for(int j=i-1;j>=0;j--){
+            System.out.print(octal[j]);
+
         }
 
     }
