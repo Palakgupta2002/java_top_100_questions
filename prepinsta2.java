@@ -5,8 +5,8 @@ public class prepinsta2 {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter a number");
         int number = sc.nextInt();
-        System.out.println("enter a second number");
-        int number1=sc.nextInt();
+        // System.out.println("enter a second number");
+        // int number1=sc.nextInt();
         // System.out.print("enter a string");
         // String str=sc.nextLine();
         // HCF(number, number1);
@@ -20,7 +20,9 @@ public class prepinsta2 {
         // DEcimaltooctal(214);
         // binarytooctal(number);
         // octaltobinary(number);
-        findquadrant(number, number1);
+        // findquadrant(number, number1);
+        // Permutations(number, number1);
+        maximumnumberofhandshaking(number);
     }
 
     // Program for find a H.C.F.
@@ -167,7 +169,36 @@ public class prepinsta2 {
             
             
         }
-
+        //this a helper program for permutation
+        public static int factorial(int number){
+            int res=1;
+            //base condition
+            if(number==1 || number==0){
+              return 1;  
+        
+            }
+            else{
+                for(int i=1;i<=number;i++){
+                    res=res*i;
+                }
+                return res;
+            }
+        
+        }
+        //Permutations in which n people can occupy r seats in a classroom in java
+        public static void Permutations (int student,int seat) {
+            int r=student-seat;
+           int fact1=factorial(student);
+           int fact2=factorial(r);
+           int Permutations=fact1/fact2;
+           System.out.println(Permutations);    
+        }
+        //Maximum number of handshakes in java
+        public static void maximumnumberofhandshaking(int number) {
+            int maximum=((number-1)*number)/2;
+            System.out.println("THe maximum total number of handshaking is "+ maximum);
+        }
+        
 
     }
 
