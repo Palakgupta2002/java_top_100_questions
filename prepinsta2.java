@@ -3,8 +3,8 @@ import java.util.*;
 public class prepinsta2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        // System.out.println("enter a number");
-        // int number = sc.nextInt();
+        System.out.println("enter a number");
+        int number = sc.nextInt();
         // System.out.println("enter a second number");
         // int number1=sc.nextInt();
         // System.out.print("enter a string");
@@ -17,7 +17,8 @@ public class prepinsta2 {
         // octaltodecimal(number);
         // Hexadecimal(str);
         // decimaltobinary(number);
-        DEcimaltooctal(214);
+        // DEcimaltooctal(214);
+        binarytooctal(number);
     }
 
     // Program for find a H.C.F.
@@ -47,7 +48,7 @@ public class prepinsta2 {
     }
 
     // Java program to convert Binary number to decimal number
-    public static void binarytodecimal(int binarynumber) {
+    public static int binarytodecimal(int binarynumber) {
         int decimal = 0;
         int pow = 0;
         while (binarynumber > 0) {
@@ -56,7 +57,8 @@ public class prepinsta2 {
             binarynumber = binarynumber / 10;
             pow++;
         }
-        System.out.println("The decimal conversion is  " + decimal);
+        // System.out.println("The decimal conversion is  " + decimal);
+        return decimal;
     }
 
     // program for Octal to decimal
@@ -87,7 +89,7 @@ public class prepinsta2 {
     }
 
     // Program for Decimal To Binary Conversion
-    public static void decimaltobinary(int number) {
+    public static int decimaltobinary(int number) {
         
         int binarynumber[] = new int[20];
         int i = 0;
@@ -101,6 +103,9 @@ public class prepinsta2 {
             System.out.print(binarynumber[j]);
             
         }
+        return binarynumber[i];
+        
+
 
     }
     //Program for Decimal to octal
@@ -116,6 +121,18 @@ public class prepinsta2 {
             System.out.print(octal[j]);
 
         }
+    }
+         
+            
+        
+        public static void binarytooctal(int number) {
+          int decimal=  binarytodecimal(number);
+          DEcimaltooctal(decimal);
+
+        
+            
+        }
+        
 
     }
-}
+
