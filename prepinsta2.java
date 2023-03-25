@@ -18,7 +18,8 @@ public class prepinsta2 {
         // Hexadecimal(str);
         // decimaltobinary(number);
         // DEcimaltooctal(214);
-        binarytooctal(number);
+        // binarytooctal(number);
+        octaltobinary(number);
     }
 
     // Program for find a H.C.F.
@@ -62,7 +63,7 @@ public class prepinsta2 {
     }
 
     // program for Octal to decimal
-    public static void octaltodecimal(int ocatalnumber) {
+    public static int octaltodecimal(int ocatalnumber) {
         int decimal = 0;
         int pow = 0;
         while (ocatalnumber > 0) {
@@ -72,7 +73,8 @@ public class prepinsta2 {
             pow++;
 
         }
-        System.out.println("The decimal number conversion is " + decimal);
+        // System.out.println("The decimal number conversion is " + decimal);
+        return decimal;
     }
 
     // Program for Hexadecimal to Decimal
@@ -132,7 +134,13 @@ public class prepinsta2 {
         
             
         }
-        
+        public static void octaltobinary(int number) {
+            int decimal=octaltodecimal(number);
+        decimaltobinary(decimal);
+
+            
+        }
+
 
     }
 
