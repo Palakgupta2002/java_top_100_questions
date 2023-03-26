@@ -3,8 +3,8 @@ import java.util.*;
 public class prepinsta2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter a number");
-        int number = sc.nextInt();
+        // System.out.println("enter a number");
+        // int number = sc.nextInt();
         // System.out.println("enter a second number");
         // int number1=sc.nextInt();
         // System.out.print("enter a string");
@@ -22,7 +22,8 @@ public class prepinsta2 {
         // octaltobinary(number);
         // findquadrant(number, number1);
         // Permutations(number, number1);
-        maximumnumberofhandshaking(number);
+        // maximumnumberofhandshaking(number);
+        addfractionsnumber(1, 3, 3, 9);
     }
 
     // Program for find a H.C.F.
@@ -198,7 +199,49 @@ public class prepinsta2 {
             int maximum=((number-1)*number)/2;
             System.out.println("THe maximum total number of handshaking is "+ maximum);
         }
-        
+        //Program for to add two fractions number
+        public static void addfractionsnumber(int num1,int denum1,int num2,int denum2){
+             int LCM; 
+             int multinum1;
+             int multinum2;
+             int multinum3;
+             int x;
+
+            //base condition
+            if(denum1==0 || denum2==0){
+                System.out.println("This fraction addition is undifined");
+            }
+            else if(num1==0){
+                System.out.println(num2 + "/" + denum2);
+            }
+            else if(num2==0){
+                System.out.println(num1 +" / "+denum1);
+            }
+            else{
+                LCM=denum1*denum2;
+                multinum1=denum2*num1;
+                multinum2=denum1*num2;
+                multinum3=multinum1+multinum2;
+                if(multinum3>LCM){
+                    x=multinum3;
+
+                }
+                else{
+                    x=LCM;
+                }
+                for(int i=1;i<=x;i++){
+                    if(LCM%i==0 && multinum3%i==0){
+                        LCM=LCM/i;
+                        multinum3=multinum3/i;
+
+                    }
+                    
+                }
+                System.out.println(multinum3+"/" +LCM);
+            }
+
+            
+        }
 
     }
 
