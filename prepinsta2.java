@@ -26,7 +26,9 @@ public class prepinsta2 {
         // addfractionsnumber(1, 3, 3, 9);
         // replacezerostointeger(number);
         // expressedsum(number);
-        calculateareaofcircle(number);
+        // calculateareaofcircle(number);
+        // findprimeonetohundred(number);
+        findnumberofdigits(number);
     }
 
     // Program for find a H.C.F.
@@ -262,7 +264,7 @@ public class prepinsta2 {
         public static boolean primeornot(int number){
             int count=0;
             if(number==0 || number==1){
-                return true;
+                return false;
             }
             else{
                 for(int i=2;i<number;i++){
@@ -290,12 +292,34 @@ public class prepinsta2 {
             }
 
         }
+
         //calculate area of circle
         public static void calculateareaofcircle(int radius) {
             float areaofcircle=(float) (3.14*radius*radius);
             System.out.println("The area of circle is "+ areaofcircle );
 
             
+        }
+        //Find the prime numbers between 1 to 100
+        public static void findprimeonetohundred(int number) {
+            for(int i=1;i<=number;i++){
+                if(primeornot(i)==true){
+                    System.out.print(i+" ,");
+                }
+
+            }
+            
+        }
+        //Java Code to find number of digits in an integer
+        public static void findnumberofdigits(int number){
+            int count=0;
+            while(number!=0){
+                int res=number%10;
+                count++;
+                number=number/10;
+
+            }
+            System.out.println("The number of digits is "+ count);
         }
 
         
