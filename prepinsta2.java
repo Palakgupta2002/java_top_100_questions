@@ -25,7 +25,8 @@ public class prepinsta2 {
         // maximumnumberofhandshaking(number);
         // addfractionsnumber(1, 3, 3, 9);
         // replacezerostointeger(number);
-        expressedsum(number);
+        // expressedsum(number);
+        calculateareaofcircle(number);
     }
 
     // Program for find a H.C.F.
@@ -288,6 +289,13 @@ public class prepinsta2 {
                 }
             }
 
+        }
+        //calculate area of circle
+        public static void calculateareaofcircle(int radius) {
+            float areaofcircle=(float) (3.14*radius*radius);
+            System.out.println("The area of circle is "+ areaofcircle );
+
+            
         }
 
         
