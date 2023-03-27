@@ -3,8 +3,8 @@ import java.util.*;
 public class prepinsta2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        // System.out.println("enter a number");
-        // int number = sc.nextInt();
+        System.out.println("enter a number");
+        int number = sc.nextInt();
         // System.out.println("enter a second number");
         // int number1=sc.nextInt();
         // System.out.print("enter a string");
@@ -23,7 +23,9 @@ public class prepinsta2 {
         // findquadrant(number, number1);
         // Permutations(number, number1);
         // maximumnumberofhandshaking(number);
-        addfractionsnumber(1, 3, 3, 9);
+        // addfractionsnumber(1, 3, 3, 9);
+        // replacezerostointeger(number);
+        expressedsum(number);
     }
 
     // Program for find a H.C.F.
@@ -238,10 +240,57 @@ public class prepinsta2 {
                     
                 }
                 System.out.println(multinum3+"/" +LCM);
+            }    
+        }
+        // Program for Replace all 0’s with 1 in a given integer using Java
+        public static void replacezerostointeger(int number){
+            String str=Integer.toString(number);
+            int len=str.length();
+            String str1="";
+            for(int i=0;i<len;i++){
+                if(str.charAt(i)=='0'){
+                    str1=str1+'1';
+                }
+                else{
+                    str1=str1+str.charAt(i);
+                }
+            }
+            System.out.println(str1);
+
+        }
+        public static boolean primeornot(int number){
+            int count=0;
+            if(number==0 || number==1){
+                return true;
+            }
+            else{
+                for(int i=2;i<number;i++){
+                    if(number%i==0){
+                    count++;
+                    }
+                }
+            }
+            if(count>0){
+                return false;
+    
+            }
+            else{
+                return true;
+            }
+        }
+        //Can a number be expressed as a sum of two prime numbers using Java?
+        public static void expressedsum(int number){
+            for(int i=2;i<=number/2;i++){
+                if(primeornot(i)==true){
+                    if(primeornot(number-i)==true){
+                        System.out.println(i+"+"+ (number-i)+ " " +"="+number);
+                    }
+                }
             }
 
-            
         }
+
+        
 
     }
 
