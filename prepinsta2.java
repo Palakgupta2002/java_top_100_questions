@@ -28,7 +28,9 @@ public class prepinsta2 {
         // expressedsum(number);
         // calculateareaofcircle(number);
         // findprimeonetohundred(number);
-        findnumberofdigits(number);
+        // findnumberofdigits(number);
+        // convertgivenumber(3465);
+    
     }
 
     // Program for find a H.C.F.
@@ -320,6 +322,65 @@ public class prepinsta2 {
 
             }
             System.out.println("The number of digits is "+ count);
+        }
+        //This a helper function for convert a number to words
+        private static String numbertowords(int number) {
+            String word="";
+            String[] untiarray={"Zero","one","two","three","four","five",
+            "six","seven","eight","nine","ten","eleven","twelve","thirteen",
+            "fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"
+            };
+            String[] tensarray={"Zero","ten","twenty","thirty","fourty",
+            "fifty","sixty","seventy","eighty","ninety",
+
+            };
+            if(number==0){
+               return "Zero";
+
+            }
+            if(number<0){
+                String number1=""+number;
+                number1=number1.substring(1);
+                return "Minus "+ numbertowords(Integer.parseInt(number1));
+
+            }
+            if((number/1000000)>0){
+                word=word+numbertowords(number/1000000)+" Millon";
+                number=number%1000000;
+            }
+            if((number/1000)>0){
+                word=word+numbertowords(number/1000)+" Thousand";
+                number=number%1000;
+            }
+            if((number/100)>0){
+                word=word+numbertowords(number/1000)+" Hundred";
+                number=number%1000;
+            }
+            if(number>0){
+                if(number<20){
+                    word=word+ " " +untiarray[number];
+                }
+                else{
+                    word=word+tensarray[number/10];
+                    if((number%10)>0){
+                        word=word+" - "+untiarray[number%10];
+
+                    }
+                }
+            }
+            return word;
+
+
+            
+        }
+        //Program to convert a given number to words
+        public static void convertgivenumber(int number){
+           if(number==0){
+            System.out.println("Zero");
+           }
+           else{
+            System.out.println("Number in words is a "+ numbertowords(number));
+           }
         }
 
         
