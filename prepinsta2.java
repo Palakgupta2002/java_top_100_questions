@@ -31,6 +31,7 @@ public class prepinsta2 {
         // findprimeonetohundred(number);
         // findnumberofdigits(number);
         // convertgivenumber(3465);
+        Occurrencedigits(8800983,8);
     
     }
 
@@ -406,7 +407,20 @@ public class prepinsta2 {
             System.out.println(-(double)b / (2 * a) + " + i" + sqrt_val + "\n" + -(double)b / (2 * a) + " - i" + sqrt_val);
         }
     }
-    //
+    //Occurrence of a digit in a given number using Java
+    public static void Occurrencedigits(int number,int repeateno){
+        int count=0;
+        while(number!=0){
+            int rem=number%10;
+            if(rem==repeateno){
+                count++;
+            }
+            number=number/10;
+        }
+        System.out.println(count);
+    }
+    //Finding number of integers which has exactly X divisors
+    
 
         
 
