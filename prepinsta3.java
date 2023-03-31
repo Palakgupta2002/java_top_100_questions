@@ -5,9 +5,10 @@ public class prepinsta3 {
         Scanner sc=new Scanner(System.in);
         System.out.println("enter a number");
         int number=sc.nextInt(); 
-        System.out.println("enter a power");
-        int powe=sc.nextInt(); 
-       System.out.println((power(number, powe)));
+    //     System.out.println("enter a power");
+    //     int powe=sc.nextInt(); 
+    //    System.out.println((power(number, powe)));
+   System.out.println(primeornot(number, 2));
 
     }
     //Power of a Number using Recursion in Java
@@ -25,6 +26,26 @@ public class prepinsta3 {
        return res=number*power(number,power-1);
        
     }
+    //cheack the given number is prime number or not
+    public static boolean primeornot(int number,int divisor){
+        //base conditon
+        if(number==1 || number==0){
+          return  false; 
+        }
+        //main logic
+        if(number%divisor==0){
+            return false;
+        }
+        else{
+            while(divisor-1==number){
+                return primeornot(number, divisor+1);
+            }
+           
+        }
+        return true;
+    }
+    
+
 
     
 }
