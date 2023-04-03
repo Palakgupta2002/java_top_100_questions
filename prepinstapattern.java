@@ -9,7 +9,8 @@ public class prepinstapattern {
         // rhombusstarpattern(n);
         // mirroredrhombustar(n);
         // Trianglestarpattern(n);
-        pyramidstarpattern(n);
+        // pyramidstarpattern(n);
+        hollowpyramidstarpattern(n);
 
     }
     // print Square Star Pattern
@@ -92,7 +93,12 @@ public class prepinstapattern {
         
     }
     //print Hollow Pyramid Star Pattern
-    
+    public static  void hollowpyramidstarpattern(int n){
+       
+
+
+    }
+
 
     
 }
