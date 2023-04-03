@@ -6,7 +6,8 @@ public class prepinstapattern {
         int n=sc.nextInt();
         // squrepattern(n);
         // hollowsqurepattern(n);
-        rhombusstarpattern(n);
+        // rhombusstarpattern(n);
+        mirroredrhombustar(n);
 
     }
     // print Square Star Pattern
@@ -50,6 +51,20 @@ public class prepinstapattern {
 
         }
     }
-    
+    //print Mirrored Rhombus Star Pattern
+    public static void mirroredrhombustar(int n) {
+        int k;
+       for (int i=0;i<n;i++){
+        for (k=n-1 ;k>i;k--){
+            System.out.print(" ");
+        }
+        for(int j=0;j<n;j++){
+            System.out.print("*");
+        }
+    System.out.println(" ");
+
+       } 
+  }
+  
     
 }
