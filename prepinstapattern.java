@@ -5,7 +5,8 @@ public class prepinstapattern {
         System.out.println("enter a number");
         int n=sc.nextInt();
         // squrepattern(n);
-        hollowsqurepattern(n);
+        // hollowsqurepattern(n);
+        rhombusstarpattern(n);
 
     }
     // print Square Star Pattern
@@ -20,6 +21,7 @@ public class prepinstapattern {
         }
 
     }
+    //print hollow squre pattern
     public static void hollowsqurepattern(int n){
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
@@ -31,6 +33,21 @@ public class prepinstapattern {
                 }
             }
             System.out.println("");
+        }
+    }
+    //print Rhombus Star Pattern
+    public static void rhombusstarpattern(int n){
+        for (int i=0;i<n;i++){
+            for(int j=0;j<=i;j++){
+                System.out.print(" ");
+            }
+                for(int k=0;k<n;k++){
+                    System.out.print("*");
+                }
+            
+            System.out.println("");
+            
+
         }
     }
     
