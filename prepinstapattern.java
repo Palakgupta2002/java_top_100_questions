@@ -7,7 +7,8 @@ public class prepinstapattern {
         // squrepattern(n);
         // hollowsqurepattern(n);
         // rhombusstarpattern(n);
-        mirroredrhombustar(n);
+        // mirroredrhombustar(n);
+        Trianglestarpattern(n);
 
     }
     // print Square Star Pattern
@@ -64,7 +65,16 @@ public class prepinstapattern {
     System.out.println(" ");
 
        } 
-  }
-  
+    }
+    //print Triangle Star Pattern
+    public static void Trianglestarpattern(int n){
+        for(int i=0;i<n;i++){
+            for(int j=0;j<i;j++){
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+    }
+
     
 }
