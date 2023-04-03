@@ -3,13 +3,15 @@ import java.util.*;
 public class prepinsta3 {
     public static void main(String[]args){
         Scanner sc=new Scanner(System.in);
-        // System.out.println("enter a number");
-        // int number=sc.nextInt(); 
-    //     System.out.println("enter a power");
-    //     int powe=sc.nextInt(); 
+        // System.out.println("enter a number1");
+        // int number1=sc.nextInt(); 
+        // System.out.println("enter a number2");
+        // int number2=sc.nextInt();
+        System.out.println("enter a String");
+        String str=sc.nextLine(); 
           
-           System.out.println("enter a number");
-           int n=sc.nextInt(); 
+        //    System.out.println("enter a number");
+        //    int n=sc.nextInt(); 
         //    int[] Array = new int[n];
         //    for(int i=0;i<n;i++){
         //    System.out.println("enter a array's value ");
@@ -18,13 +20,17 @@ public class prepinsta3 {
         //    }
          
            //System.out.println((power(number, powe)));
-          // System.out.println(primeornot(number, 2));
-        //  System.out.println(largestnumber(0, n, Array));
-        //   System.out.println(largestelement(Array[],0,-9999));
+          //System.out.println(primeornot(number, 2));
+        //System.out.println(largestnumber(0, n, Array));
+        //System.out.println(largestelement(Array[],0,-9999));
        
     //  int k=  FindlargestInteger(Array, 0, -3456);
     //  System.out.println(k);
-    reversingnumber(n);
+    // reversingnumber(n);
+    //  System.out.println(hcfrecursionfun(number1, number2));
+    //    System.out.println(lengthofstring(str));
+ printPermutn(str, "");
+
     }
     //Power of a Number using Recursion in Java
   
@@ -86,10 +92,57 @@ public class prepinsta3 {
         else{
             System.out.print(number%10);
             reversingnumber(number/10);
+        }   
+    }
+    //HCF of a Number using Recursion in Java
+    public static int hcfrecursionfun(int number1,int number2) {
+        if(number1==0){
+             return number2;
         }
-
+        if(number2==0){
+            return number1;
+       }
+       if(number1>number2){
+        return hcfrecursionfun(number1-number2 , number2);
+       }
+       else{
+        return hcfrecursionfun(number1, number2-number1);
+       }   
+    }
+    //To Calculate length of The String Using Recursion in Java
+    public static int lengthofstring (String str) {
+        if(str.equals("")){
+            return 0;
+        }
+        else{
+            return  lengthofstring(str.substring(1))+1;
+         
+        }
         
     }
+    //This is a helper function for permutation of swapping
+    public static char swap(char str1,char str2){
+        char str3;
+        str3=str2;
+        str2=str1;
+        str1=str3;
+        return str1;
+       
+    } 
+    //print permutation of given string
+    static void printPermutn(String str, String ans) {
+       //If string is empty
+       if(str.length()==0){
+        System.out.println(ans);
+        return ;
+       }
+       for(int i=0;i<str.length();i++){
+        char ch=str.charAt(i);
+        String r=str.substring(0, i)+str.substring(i+1);
+        printPermutn(r, ans+ch);
+       }
+       }
+       //
 }
       
     
