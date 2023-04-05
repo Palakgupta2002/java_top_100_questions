@@ -11,7 +11,9 @@ public class prepinstapattern {
         // Trianglestarpattern(n);
         // pyramidstarpattern(n);
         // hollowpyramidstarpattern(n);
-        invertedpyramid(n);
+        // invertedpyramid(n);
+    //    invertedhollowpyramid(n);
+    halfdiamondstar(n);
 
     }
     // print Square Star Pattern
@@ -95,10 +97,30 @@ public class prepinstapattern {
     }
     //print Hollow Pyramid Star Pattern
     public static  void hollowpyramidstarpattern(int n){
-       
+        int i, j, k = 0; 
+        for (i = 1; i <= n; i++)  
+        { 
+            
+            for (j = i; j < n; j++)  
+                System.out.print(" "); 
+            while (k != (2 * i - 1)) { 
+                if (k == 0 || k == 2 * i - 2) 
+                    System.out.print("*"); 
+                else
+                    System.out.print(" "); 
+                k++; 
+                ; 
+            } 
+            k = 0; 
+            System.out.println();  
+        } 
+        // print last row 
+        for (i = 0; i < 2 * n - 1; i++)  
+            System.out.print("*"); 
+        
+    } 
+    
 
-
-    }
     //  Print Inverted Pyramid Star Pattern
     public static void invertedpyramid(int n){
         for(int i=n;i>0;i--){
@@ -112,5 +134,43 @@ System.out.print(" ");
             System.out.println(" ");
         }   
 }
-
+//Print Inverted Hollow Pyramid Star Pattern
+public static void invertedhollowpyramid(int n) {
+    for(int i=n;i>0;i--)
+		{
+		 for(int j=1;j<=n-i;j++)
+		  System.out.print(" ");
+		 if(i==1 || i==n)
+		 for(int j=1;j<=i*2-1;j++)
+		  System.out.print("*");
+		else
+		 for(int j=1;j<=i*2-1;j++)
+		if(j==1 || j==i*2-1)
+		  System.out.print("*");
+		else
+		  System.out.print(" ");
+		System.out.println();
+     }
+  }
+  //Print Half Diamond Star Pattern
+  public static void halfdiamondstar(int n) {
+    for(int i=1;i<n;i++){
+        for(int j=0;j<i;j++){
+            System.out.print("*");
+        }
+        System.out.println("");
+    }
+    for(int i=n-2;i>=0;i--){
+        for(int j=0;j<i;j++){
+            System.out.print("*");
+        }
+        System.out.println("");
+    }
+    
+  }
+  
+    
 }
+
+
+
