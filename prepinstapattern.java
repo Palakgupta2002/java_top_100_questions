@@ -10,7 +10,8 @@ public class prepinstapattern {
         // mirroredrhombustar(n);
         // Trianglestarpattern(n);
         // pyramidstarpattern(n);
-        hollowpyramidstarpattern(n);
+        // hollowpyramidstarpattern(n);
+        invertedpyramid(n);
 
     }
     // print Square Star Pattern
@@ -98,7 +99,18 @@ public class prepinstapattern {
 
 
     }
+    //  Print Inverted Pyramid Star Pattern
+    public static void invertedpyramid(int n){
+        for(int i=n;i>0;i--){
+            for(int k=0;k<n-i;k++){
+System.out.print(" ");
 
+            }
+            for(int j=0;j<i;j++){
+                System.out.print(" *");
+            }
+            System.out.println(" ");
+        }   
+}
 
-    
 }
