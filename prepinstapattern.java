@@ -8,14 +8,14 @@ public class prepinstapattern {
         // hollowsqurepattern(n);
         // rhombusstarpattern(n);
         // mirroredrhombustar(n);
-        // Trianglestarpattern(n);
+        Trianglestarpattern(n);
         // pyramidstarpattern(n);
         // hollowpyramidstarpattern(n);
         // invertedpyramid(n);
     //    invertedhollowpyramid(n);
     // halfdiamondstar(n);
     // hollowpyramidstarpattern(n);
-    invertedhalfdiamondstar( n);
+    // invertedhalfdiamondstar( n);
 
     }
     // print Square Star Pattern
@@ -75,9 +75,11 @@ public class prepinstapattern {
     }
     //print Triangle Star Pattern
     public static void Trianglestarpattern(int n){
-        for(int i=0;i<n;i++){
+        for(int i=0;i<=n;i++){
             for(int j=0;j<i;j++){
+                if(i%2!=0){
                 System.out.print("*");
+                }
             }
             System.out.println(" ");
         }
@@ -194,6 +196,14 @@ public static void invertedhollowpyramid(int n) {
   }
   //Print Diamond Star Pattern
   public static void Diamondstarpattern(int n) {
+    for(int i=0;i<n;i++){
+        for(int j=0;j<i;j++){
+            if(i%2!=0){
+            System.out.print(" *");
+            }
+        }
+        System.out.println(" ");
+    }
    
     
   }
