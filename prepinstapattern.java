@@ -25,7 +25,7 @@ public class prepinstapattern {
     // basicRighttrianglenumberpattern(n);
     // incrementtrianglepattern( n);
     // incrementtriangleinitialised( n);
-
+    incrementdiamondpattern(n);
     
 
     }
@@ -340,7 +340,28 @@ public static void invertedhollowpyramid(int n) {
   }
   //Print Basic incrementing Diamond Pattern(Inverted) initialised = 3
   public static void incrementdiamondpattern(int n) {
-    
+    int p=n/2+1;
+    for(int i=1;i<n;i++){
+        for(int k=n-1;k>i;k--){
+            System.out.print(" ");
+        }
+        for(int j=0;j<i;j++){
+            System.out.print(p);
+            p++;
+        }
+        System.out.println("");
+    }
+    int r=n+1;
+    for(int i=n-2;i>=0;i--){
+        for(int k=n-1;k>i;k--){
+            System.out.print(" ");
+        }
+        for(int j=0;j<i;j++){
+            System.out.print(r);
+            r--;
+        }
+        System.out.println("");
+    }
     
   }
   
