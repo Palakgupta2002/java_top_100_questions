@@ -22,7 +22,7 @@ public class prepinstapattern {
     // internalvarsitypattern( n);
     // Righttrianglenumberpattern(n);
     // invertRighttrianglenumberpattern(n);
-    basicRighttrianglenumberpattern(n);
+    basi
     
 
     }
@@ -290,10 +290,8 @@ public static void invertedhollowpyramid(int n) {
   }
   //print Basic Right Triangle Number Pattern (Inverted)
   public static void invertRighttrianglenumberpattern(int n){
-    int i;
-    int k=i;
-
-    for ( i=n;i>=1;i--){
+    int k=n*2;
+    for (int i=n;i>=1;i--){
         for(int j=1;j<i;j++,k--){
             System.out.print(k);
         }
@@ -302,7 +300,17 @@ public static void invertedhollowpyramid(int n) {
 
   }
   //print Basic incrementing Triangle Pattern initialised = 3
- 
+  public static void basicRighttrianglenumberpattern(int n){
+    int k=n+2;
+    for (int i=n;i>=1;i--){
+        for(int j=1;j<i;j++,k--){
+            System.out.print(k);
+        }
+        System.out.println("");
+    }
+
+  }
+  
     
 }
 
