@@ -19,7 +19,10 @@ public class prepinstapattern {
     // daimondpattern(n);
     // basicsqurepattern(n);
     // basicsqurepatternincrement(n);
-    internalvarsitypattern( n);
+    // internalvarsitypattern( n);
+    // Righttrianglenumberpattern(n);
+    invertRighttrianglenumberpattern(n);
+    
 
     }
     // print Square Star Pattern
@@ -275,6 +278,26 @@ public static void invertedhollowpyramid(int n) {
 
   }
   //Print Basic Right Triangle Number Pattern
+  public static void Righttrianglenumberpattern(int n){
+    int k=1;
+    for (int i=1;i<=n;i++){
+        for(int j=1;j<i;j++,k++){
+            System.out.print(k);
+        }
+        System.out.println("");
+    }
+  }
+  //print Basic Right Triangle Number Pattern (Inverted)
+  public static void invertRighttrianglenumberpattern(int n){
+    int k=n*2;
+    for (int i=n;i>=1;i--){
+        for(int j=1;j<i;j++,k--){
+            System.out.print(k);
+        }
+        System.out.println("");
+    }
+
+  }
   
     
 }
