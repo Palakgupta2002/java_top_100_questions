@@ -3,12 +3,12 @@ import java.util.*;
 public class prepinsta3 {
     public static void main(String[]args){
         Scanner sc=new Scanner(System.in);
-        // System.out.println("enter a number1");
-        // int number1=sc.nextInt(); 
+        System.out.println("enter a number1");
+        int number1=sc.nextInt(); 
         // System.out.println("enter a number2");
         // int number2=sc.nextInt();
-        System.out.println("enter a String");
-        String str=sc.nextLine(); 
+        // System.out.println("enter a String");
+        // String str=sc.nextLine(); 
           
         //    System.out.println("enter a number");
         //    int n=sc.nextInt(); 
@@ -29,7 +29,8 @@ public class prepinsta3 {
     // reversingnumber(n);
     //  System.out.println(hcfrecursionfun(number1, number2));
     //    System.out.println(lengthofstring(str));
- printPermutn(str, "");
+//  printPermutn(str, "");
+System.out.println(term(1, 1,number1));
 
     }
     //Power of a Number using Recursion in Java
@@ -120,15 +121,7 @@ public class prepinsta3 {
         }
         
     }
-    //This is a helper function for permutation of swapping
-    public static char swap(char str1,char str2){
-        char str3;
-        str3=str2;
-        str2=str1;
-        str1=str3;
-        return str1;
-       
-    } 
+    
     //print permutation of given string
     static void printPermutn(String str, String ans) {
        //If string is empty
@@ -142,8 +135,20 @@ public class prepinsta3 {
         printPermutn(r, ans+ch);
        }
        }
-    
+       //Print Given an integer N the task is to print the F(N)th term in Java
+       static int term (int calculated, int current, int N)
+  {
+    int i, cur = 1;
+    // Base Condition
+    if (current == N + 1)
+      return 0;
+    // product of terms till current
+    for (i = calculated; i < calculated + current; i++)
+      cur *= i;
+    return cur + term (i, current + 1, N);
+  }
 }
+
       
     
 
