@@ -10,14 +10,14 @@ public class prepinsta3 {
         // System.out.println("enter a String");
         // String str=sc.nextLine(); 
           
-        //    System.out.println("enter a number");
-        //    int n=sc.nextInt(); 
-        //    int[] Array = new int[n];
-        //    for(int i=0;i<n;i++){
-        //    System.out.println("enter a array's value ");
-        //     Array[i]=sc.nextInt();
+           System.out.println("enter a number");
+           int n=sc.nextInt(); 
+           int[] Array = new int[n];
+           for(int i=0;i<n;i++){
+           System.out.println("enter a array's value ");
+            Array[i]=sc.nextInt();
             
-        //    }
+           }
          
            //System.out.println((power(number, powe)));
           //System.out.println(primeornot(number, 2));
@@ -30,7 +30,8 @@ public class prepinsta3 {
     //  System.out.println(hcfrecursionfun(number1, number2));
     //    System.out.println(lengthofstring(str));
 //  printPermutn(str, "");
-System.out.println(term(1, 1,number1));
+// System.out.println(term(1, 1,number1));
+sumallsubset(0, Array.length-1, Array, 0);
 
     }
     //Power of a Number using Recursion in Java
@@ -147,6 +148,18 @@ System.out.println(term(1, 1,number1));
       cur *= i;
     return cur + term (i, current + 1, N);
   }
+  //Print Sums of all Subsets of a given set in Java
+  public  static void sumallsubset(int l,int r,int arr[],int sum) {
+    //base condition
+    if(l>r){
+        System.out.println(sum + " ");
+        return ;
+    }
+    sumallsubset(l+1, r, arr, sum+arr[l]);//substring sum
+    sumallsubset(l+1, r, arr, sum);//three cases
+  }
+  //
+
 }
 
       
