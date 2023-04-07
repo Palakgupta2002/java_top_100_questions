@@ -10,14 +10,14 @@ public class prepinsta3 {
         // System.out.println("enter a String");
         // String str=sc.nextLine(); 
           
-           System.out.println("enter a number");
-           int n=sc.nextInt(); 
-           int[] Array = new int[n];
-           for(int i=0;i<n;i++){
-           System.out.println("enter a array's value ");
-            Array[i]=sc.nextInt();
+        //    System.out.println("enter a number");
+        //    int n=sc.nextInt(); 
+        //    int[] Array = new int[n];
+        //    for(int i=0;i<n;i++){
+        //    System.out.println("enter a array's value ");
+        //     Array[i]=sc.nextInt();
             
-           }
+        //    }
          
            //System.out.println((power(number, powe)));
           //System.out.println(primeornot(number, 2));
@@ -31,7 +31,8 @@ public class prepinsta3 {
     //    System.out.println(lengthofstring(str));
 //  printPermutn(str, "");
 // System.out.println(term(1, 1,number1));
-sumallsubset(0, Array.length-1, Array, 0);
+// sumallsubset(0, Array.length-1, Array, 0);
+Lastnonzerofactorial(number1);
 
     }
     //Power of a Number using Recursion in Java
@@ -151,17 +152,36 @@ sumallsubset(0, Array.length-1, Array, 0);
   //Print Sums of all Subsets of a given set in Java
   public  static void sumallsubset(int l,int r,int arr[],int sum) {
     //base condition
+    //2. and when the base condition start our stack is empty one by one the follows rule LIFO
     if(l>r){
         System.out.println(sum + " ");
         return ;
     }
+// 1. these values going in a stack
     sumallsubset(l+1, r, arr, sum+arr[l]);//substring sum
     sumallsubset(l+1, r, arr, sum);//three cases
   }
-  //
+  //Help Factorial number
+   public static int fact(int number) {
+    if(number==0 || number==1){
+        return 1;
+    }
+    return number*fact(number-1);
+    
+  }
+  // Print Last non-zero digit in factorial in Java
+  public static void Lastnonzerofactorial(int n){
+  int factorial = fact(n);
+  int res;
+  while(factorial%10==0){
+    factorial/=10;
+}
+  System.out.println((factorial%10));
+
+  }
+  //Print Find the Nth row in Pascal’s Triangle in Java
 
 }
-
       
     
 
