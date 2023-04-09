@@ -32,7 +32,8 @@ public class prepinsta3 {
 //  printPermutn(str, "");
 // System.out.println(term(1, 1,number1));
 // sumallsubset(0, Array.length-1, Array, 0);
-Lastnonzerofactorial(number1);
+// Lastnonzerofactorial(number1);
+parscalprint(number1);
 
     }
     //Power of a Number using Recursion in Java
@@ -163,6 +164,7 @@ Lastnonzerofactorial(number1);
   }
   //Help Factorial number
    public static int fact(int number) {
+    //Base Condition
     if(number==0 || number==1){
         return 1;
     }
@@ -179,7 +181,29 @@ Lastnonzerofactorial(number1);
   System.out.println((factorial%10));
 
   }
+  //This is a helper function for Pasacal"s tringle
+  public static long ncr(int n,int r){
+    long res=1;
+    r=Math.min(r, (n-r));
+    for(int i=1;i<=r;i++){
+        res=(res*(n-i+1))/i;
+
+    }
+    return res;
+  }
   //Print Find the Nth row in Pascal’s Triangle in Java
+  public static void parscalprint(int n){
+    for(int i=0;i<=n;i++){
+       long res= ncr(n,i);
+       System.out.print(res+" ");
+       res=1;
+    }
+
+  }
+  //Print Generate all Combinations of Balanced Parentheses in Java
+  public static void generatecom(int n){
+    
+  }
 
 }
       
