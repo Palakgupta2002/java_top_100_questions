@@ -3,8 +3,8 @@ import java.util.*;
 public class prepinsta3 {
     public static void main(String[]args){
         Scanner sc=new Scanner(System.in);
-        System.out.println("enter a number1");
-        int number1=sc.nextInt(); 
+        // System.out.println("enter a number1");
+        // int number1=sc.nextInt(); 
         // System.out.println("enter a number2");
         // int number2=sc.nextInt();
         // System.out.println("enter a String");
@@ -18,6 +18,10 @@ public class prepinsta3 {
         //     Array[i]=sc.nextInt();
             
         //    }
+        System.out.println("enter a number1");
+        int n=sc.nextInt(); 
+        //    char[] str = new char[n*2];
+          
          
            //System.out.println((power(number, powe)));
           //System.out.println(primeornot(number, 2));
@@ -33,11 +37,16 @@ public class prepinsta3 {
 // System.out.println(term(1, 1,number1));
 // sumallsubset(0, Array.length-1, Array, 0);
 // Lastnonzerofactorial(number1);
-parscalprint(number1);
+// parscalprint(number1);
+// generatecomb(n, str, 0, 0, 0);
+System.out.print(factorial(n));
+
 
     }
     //Power of a Number using Recursion in Java
   
+   
+
     public static int  power(int number,int power ){
         int res=1;
         //base condition
@@ -198,12 +207,36 @@ parscalprint(number1);
        System.out.print(res+" ");
        res=1;
     }
+   
+  }
+     //Print Generate all Combinations of Balanced Parentheses in Java
+  public static void generatecomb(int n,char[] str,int open,int close,int pos) {
+if(close==n){
+    for(int i=0;i<str.length;i++)
+    System.out.print(str[i]);
+    System.out.println("");
+    return;
+   }
+    else{
+        if(open>close){
+            str[pos]='}';
+            generatecomb(n, str, open, close+1, pos+1);
+        }
+        if(open<n){
+            str[pos]='{';
+            generatecomb(n, str, open+1, close, pos+1);
+        }
+    }
+}
+// Print Find Factorial 
+public  static int factorial(int n)
+{
+    if (n == 0)
+        return 1;
 
-  }
-  //Print Generate all Combinations of Balanced Parentheses in Java
-  public static void generatecom(int n){
-    
-  }
+    return n * factorial(n - 1);
+}
+//Find all possible Palindromic Partitions of the given String in Java
 
 }
       
