@@ -6,9 +6,9 @@ public class Prepinsta4 {
            int n=sc.nextInt(); 
            int[] Array = new int[n];
            for(int i=0;i<n;i++){
-           System.out.println("enter a array's value ");
+           System.out.println("enter a array's value(positive number) ");
             Array[i]=sc.nextInt();
-            System.out.print(getmax(Array, n));
+            System.out.print(getmin(Array, n));
 
            }
         }
@@ -19,5 +19,13 @@ public class Prepinsta4 {
             }
            return Math.max(array[n-1],getmax(array, n-1) );
         }
-          
+        //Java Program for finding the smallest element of the array
+        public static int getmin(int [] array,int n){
+            if(n==1){
+                return array[0];
+            }
+           return Math.min(array[n-1],getmax(array, n-1) );
+        }
+        
+
 }
