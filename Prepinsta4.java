@@ -8,9 +8,13 @@ public class Prepinsta4 {
            for(int i=0;i<n;i++){
            System.out.println("enter a array's value(positive number) ");
             Array[i]=sc.nextInt();
-            System.out.print(getmin(Array, n));
+            // System.out.print(getmin(Array, n));
 
            }
+        //    largestsmallest(Array, n);
+        // secondsmallestnumber(Array, n);
+        // arraysum(Array, n, 0);
+        System.out.print( arraysumrecursion(Array, n, 0,0));
         }
         //Java Program for finding the largest element of the array
         public static int getmax(int [] array,int n){
@@ -24,8 +28,44 @@ public class Prepinsta4 {
             if(n==1){
                 return array[0];
             }
-           return Math.min(array[n-1],getmax(array, n-1) );
+           return Math.min(array[n-1],getmin(array, n-1) );
         }
-        
+        //Print Java Program for Finding the Smallest and largest element in an array
+        public static void largestsmallest(int aar[],int n){
+            System.out.print("largest number"+getmax(aar, n));
+            System.out.print("smallest number"+getmin(aar, n));
+        }
+        //Java program for finding the second smallest element in an array
+public static void secondsmallestnumber(int aar[],int n){
+    int smallest = Integer.MAX_VALUE;
+    int secondSmallest = Integer.MAX_VALUE;
+    for(int i=0; i<n; i++){
+        if(aar[i] < smallest){
+            secondSmallest = smallest;
+            smallest = aar[i];
+        }
+        else if(aar[i] < secondSmallest && aar[i] != smallest){
+            secondSmallest = aar[i];
+        }
+    }
+    System.out.println("The second smallest number is " + secondSmallest);
+}
+//print calculate the sum of array
+public static void  arraysum(int arr[],int n,int sum){
+for(int i=0;i<n;i++){
+    sum=sum+arr[i];
+}
+System.out.println(sum); 
+
+}
+
+
+public static int arraysumrecursion(int arr[],int n,int sum,int pos){
+    if(pos==n){
+        return sum;
+    }
+    return arraysumrecursion(arr,n,sum+arr[pos],pos+1);
+
+}
 
 }
