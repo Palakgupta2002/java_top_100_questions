@@ -15,7 +15,8 @@ public class Prepinsta4 {
         // secondsmallestnumber(Array, n);
         // arraysum(Array, n, 0);
         // System.out.print( arraysumrecursion(Array, n, 0,0));
-        slidingreversearray(Array, n);
+        // slidingreversearray(Array, n);
+        fhassshdss(n, Array);
         }
         //Java Program for finding the largest element of the array
         public static int getmax(int [] array,int n){
@@ -91,9 +92,30 @@ public static void slidingreversearray(int array[],int n){
         j++;
         i--;
         }
+    }   
+}
+// Print Sort first half in ascending order and second half in descending
+public static void fhassshdss(int n,int arr[]){
+    int temp;
+    for(int i=0;i<n-1;i++){
+        for(int j=0;j<n/2;j++){
+            if(arr[j]>arr[j+1]){
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+        for(int j=n/2;j<n-1;j++){
+            if(arr[j+1]>arr[j]){
+                temp=arr[j+1];
+                arr[j+1]=arr[j];
+                arr[j]=temp;
+            }
+        }
     }
-       
-    
+    for(int i=0;i<arr.length;i++){
+        System.out.print(arr[i]+" ");
+    }
 }
 
 }
