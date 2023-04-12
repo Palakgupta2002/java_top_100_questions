@@ -16,7 +16,8 @@ public class Prepinsta4 {
         // arraysum(Array, n, 0);
         // System.out.print( arraysumrecursion(Array, n, 0,0));
         // slidingreversearray(Array, n);
-        fhassshdss(n, Array);
+        // fhassshdss(n, Array);
+        sortarray(Array, n);
         }
         //Java Program for finding the largest element of the array
         public static int getmax(int [] array,int n){
@@ -115,6 +116,13 @@ public static void fhassshdss(int n,int arr[]){
     }
     for(int i=0;i<arr.length;i++){
         System.out.print(arr[i]+" ");
+    }
+}
+//Sort the elements of an array 
+public static void sortarray(int[] ary,int n){
+    Arrays.sort(ary);
+    for(int i=0;i<ary.length;i++){
+        System.out.print(ary[i]+" ");
     }
 }
 
