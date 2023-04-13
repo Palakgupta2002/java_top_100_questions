@@ -17,7 +17,8 @@ public class Prepinsta4 {
         // System.out.print( arraysumrecursion(Array, n, 0,0));
         // slidingreversearray(Array, n);
         // fhassshdss(n, Array);
-        sortarray(Array, n);
+        // sortarray(Array, n);
+        findfrequency(n, Array);
         }
         //Java Program for finding the largest element of the array
         public static int getmax(int [] array,int n){
@@ -124,6 +125,28 @@ public static void sortarray(int[] ary,int n){
     for(int i=0;i<ary.length;i++){
         System.out.print(ary[i]+" ");
     }
+}
+//Print Java program to find the frequency of elements in an array
+public static void findfrequency(int n,int arr[]){
+   
+   Arrays.sort(arr);
+   for(int i=0;i<arr.length;i++){ 
+    int count=1;
+
+    for(int j=i+1;j<arr.length;j++){
+        if(arr[i]==arr[j]){
+            count++;
+        }
+        else{
+            break;
+        }
+    }
+    System.out.print( arr[i]+":"+count+""+",");
+i+=(count-1);
+        
+    
+   }
+   
 }
 
 }
