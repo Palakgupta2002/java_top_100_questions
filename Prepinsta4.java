@@ -143,10 +143,33 @@ public static void findfrequency(int n,int arr[]){
     }
     System.out.print( arr[i]+":"+count+""+",");
 i+=(count-1);
-        
+       
     
    }
    
 }
+//Print Java program for Sorting elements of an array by frequency
+
+public static void sortfindfrequency(int n,int arr[]){
+   
+    Arrays.sort(arr);
+    for(int i=0;i<arr.length;i++){ 
+     int count=1;
+ 
+     for(int j=i+1;j<arr.length;j++){
+         if(arr[i]==arr[j]){
+             count++;
+         }
+         else{
+             break;
+         }
+     }
+     System.out.print( arr[i]+":"+count+""+",");
+ i+=(count-1);
+        
+     
+    }
+    
+ }
 
 }
