@@ -18,7 +18,8 @@ public class Prepinsta4 {
         // slidingreversearray(Array, n);
         // fhassshdss(n, Array);
         // sortarray(Array, n);
-        findfrequency(n, Array);
+        // findfrequency(n, Array);
+        longestpalindrome(Array, n);
         }
         //Java Program for finding the largest element of the array
         public static int getmax(int [] array,int n){
@@ -171,5 +172,35 @@ public static void sortfindfrequency(int n,int arr[]){
     }
     
  }
-
+ //This is helper Program
+ public static boolean ispalindrome(int number) {
+    int reverse=0;
+    int number1=number;
+    int rem;
+    while(number!=0){
+        rem=number%10;
+        reverse=reverse*10+rem;
+        number/=10;
+    }
+    //System.out.print("the reverse no is "+reverse);
+   if(reverse==number1){
+    return true;
+   }
+   else{
+    return false;
+   }
+    
 }
+
+ 
+ //Print Java program for longest palindrome in an array
+  public static void longestpalindrome(int ary[],int n) {
+    int res=-1;
+    for(int i=0;i<n;i++){
+       if(ary[i]>res && ispalindrome(ary[i])) {
+        res=ary[i];
+        System.out.println(res);
+       }
+    } 
+ }
+ }
