@@ -21,7 +21,8 @@ public class Prepinsta4 {
     //  findfrequency(n, Array);
         // longestpalindrome(Array, n);
         // countdistinctelement(Array, n);
-        findrepeateelement(Array, n);
+        // findrepeateelement(Array, n);
+        nonrepeatingelement(Array, n);
         }
         //Java Program for finding the largest element of the array
         public static int getmax(int [] array,int n){
@@ -245,6 +246,26 @@ public static void sortfindfrequency(int n,int arr[]){
         
     }
     
+ }
+ //Print Java program to find non-repeating elements in an array
+ public static void nonrepeatingelement(int ary[],int n){
+    Arrays.sort(ary);
+    for(int i=0;i<ary.length;i++){
+        int count=1;
+        for(int j=i+1;j<ary.length;j++){
+            if(ary[i]==ary[j]){
+                count++;
+            }
+            else{
+                break;
+            }
+        }
+        if(count==1){
+            System.out.println(ary[i]+":"+count);
+        }
+        i=i+count-1;
+        
+    } 
  }
 
 
