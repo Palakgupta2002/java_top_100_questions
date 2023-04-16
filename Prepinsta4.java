@@ -18,8 +18,9 @@ public class Prepinsta4 {
         // slidingreversearray(Array, n);
         // fhassshdss(n, Array);
         // sortarray(Array, n);
-        // findfrequency(n, Array);
-        longestpalindrome(Array, n);
+    //  findfrequency(n, Array);
+        // longestpalindrome(Array, n);
+        countdistinctelement(Array, n);
         }
         //Java Program for finding the largest element of the array
         public static int getmax(int [] array,int n){
@@ -203,4 +204,26 @@ public static void sortfindfrequency(int n,int arr[]){
        }
     } 
  }
+ //Print Java program to count distinct element in an array
+ public static void countdistinctelement(int ary[],int n){
+    Arrays.sort(ary);
+    for(int i=0;i<ary.length;i++){
+        int count=1;
+        for(int j=i+1;j<ary.length;j++){
+            if(ary[i]==ary[j]){
+                count++;
+            }
+            else{
+                break;
+            }
+        }
+        if(count==1){
+            System.out.println(ary[i]+":"+count);
+        }
+        i=i+count-1;
+        
+    }
+ }
+
+
  }
