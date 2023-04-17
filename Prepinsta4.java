@@ -22,7 +22,8 @@ public class Prepinsta4 {
         // longestpalindrome(Array, n);
         // countdistinctelement(Array, n);
         // findrepeateelement(Array, n);
-        nonrepeatingelement(Array, n);
+        // nonrepeatingelement(Array, n);
+        countevenodd(Array, n);
         }
         //Java Program for finding the largest element of the array
         public static int getmax(int [] array,int n){
@@ -267,6 +268,20 @@ public static void sortfindfrequency(int n,int arr[]){
         
     } 
  }
-
+ //Java program to count numbers of even and odd elements in an array
+ public static void countevenodd(int arr[],int n){
+    int even=0;
+    int odd=0;
+    for(int i=0;i<arr.length;i++){
+        if(arr[i]%2==0){
+            even++;
+        }
+        else{
+            odd++;
+        }
+    }
+    System.out.println("The total no. of even no. is"+""+even);
+    System.out.println("The total no. of odd  no. is"+""+odd);
+ }
 
  }
