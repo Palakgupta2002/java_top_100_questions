@@ -11,6 +11,13 @@ public class Prepinsta4 {
             // System.out.print(getmin(Array, n));
 
            }
+           System.out.println("enter a number");
+           int n2=sc.nextInt(); 
+           int[] Array2 = new int[n];
+           for(int i=0;i<n;i++){
+           System.out.println("enter a array's value(positive number) ");
+            Array2[i]=sc.nextInt();
+           }
         //    largestsmallest(Array, n);
         // secondsmallestnumber(Array, n);
         // arraysum(Array, n, 0);
@@ -24,7 +31,8 @@ public class Prepinsta4 {
         // findrepeateelement(Array, n);
         // nonrepeatingelement(Array, n);
         // countevenodd(Array, n);
-        maximumsubarray(Array, n);
+        // maximumsubarray(Array, n);
+        System.out.println(arraysdisjoint(Array, Array2));
         }
         //Java Program for finding the largest element of the array
         public static int getmax(int [] array,int n){
@@ -296,6 +304,20 @@ public static void sortfindfrequency(int n,int arr[]){
         result=Math.max(mul,result);
     }
     System.out.println(result);
+ }
+ //Java program to find Arrays are disjoint or not
+ public static boolean arraysdisjoint(int arr[], int arr1[]){
+    for(int i=0;i<arr.length;i++){
+        for(int j=0;j<arr1.length;j++){
+            if(arr[i]==arr[j]){
+               
+                return false;
+            }
+           
+        }
+    }
+    return true;
+
  }
 
  }
