@@ -23,7 +23,8 @@ public class Prepinsta4 {
         // countdistinctelement(Array, n);
         // findrepeateelement(Array, n);
         // nonrepeatingelement(Array, n);
-        countevenodd(Array, n);
+        // countevenodd(Array, n);
+        maximumsubarray(Array, n);
         }
         //Java Program for finding the largest element of the array
         public static int getmax(int [] array,int n){
@@ -282,6 +283,19 @@ public static void sortfindfrequency(int n,int arr[]){
     }
     System.out.println("The total no. of even no. is"+""+even);
     System.out.println("The total no. of odd  no. is"+""+odd);
+ }
+ //Maximum product of sub-array in Java
+ public static void maximumsubarray(int arr[],int n){
+    int result=arr[0];
+    for(int i=0;i<n;i++){
+        int mul=arr[i];
+        for(int j=i+1;j<n;j++){
+            result=Math.max(result, mul);
+            mul=mul*arr[j];
+        }
+        result=Math.max(mul,result);
+    }
+    System.out.println(result);
  }
 
  }
