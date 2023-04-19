@@ -32,7 +32,8 @@ public class Prepinsta4 {
         // nonrepeatingelement(Array, n);
         // countevenodd(Array, n);
         // maximumsubarray(Array, n);
-        System.out.println(arraysdisjoint(Array, Array2));
+        // System.out.println(arraysdisjoint(Array, Array2));
+        isSubset(Array, Array2, n, n2);
         }
         //Java Program for finding the largest element of the array
         public static int getmax(int [] array,int n){
@@ -317,7 +318,37 @@ public static void sortfindfrequency(int n,int arr[]){
         }
     }
     return true;
+} 
+static boolean isSubset(int arr1[], int arr2[], int m, int n)
+{
+    int i = 0;
 
- }
+    for (i = 0; i < n; i++) {
+        if (binarySearch(arr1, 0, m - 1, arr2[i]) == -1)
+            return false;
+    }
+
+    return true;
+}
+
+static int binarySearch(int arr[], int low, int high, int x)
+{
+    if (high >= low)
+    {
+        /*low + (high - low)/2;*/
+        int mid = (low + high)/ 2;
+
+        if ((mid == 0 || x > arr[mid - 1])&& (arr[mid] == x))
+            return mid;
+        else if (x > arr[mid])
+            return binarySearch(arr,(mid + 1), high,x);
+        else
+            return binarySearch(arr, low,(mid - 1), x);
+    }
+    return -1;
+}
+
+
+
 
  }
