@@ -11,13 +11,13 @@ public class Prepinsta4 {
             // System.out.print(getmin(Array, n));
 
            }
-           System.out.println("enter a number");
-           int n2=sc.nextInt(); 
-           int[] Array2 = new int[n];
-           for(int i=0;i<n;i++){
-           System.out.println("enter a array's value(positive number) ");
-            Array2[i]=sc.nextInt();
-           }
+        //    System.out.println("enter a number");
+        //    int n2=sc.nextInt(); 
+        //    int[] Array2 = new int[n];
+        //    for(int i=0;i<n;i++){
+        //    System.out.println("enter a array's value(positive number) ");
+        //     Array2[i]=sc.nextInt();
+        //    }
         //    largestsmallest(Array, n);
         // secondsmallestnumber(Array, n);
         // arraysum(Array, n, 0);
@@ -33,7 +33,8 @@ public class Prepinsta4 {
         // countevenodd(Array, n);
         // maximumsubarray(Array, n);
         // System.out.println(arraysdisjoint(Array, Array2));
-        isSubset(Array, Array2, n, n2);
+        // isSubset(Array, Array2, n, n2);
+        
         }
         //Java Program for finding the largest element of the array
         public static int getmax(int [] array,int n){
@@ -346,6 +347,18 @@ static int binarySearch(int arr[], int low, int high, int x)
             return binarySearch(arr, low,(mid - 1), x);
     }
     return -1;
+}
+//Java Program to find sum of minimum absolute difference of the given array
+public static int summinabsdif(int arr[],int n){
+    int result=Integer.MAX_VALUE;
+    for(int i=0;i<n;i++){
+        int sum=0;
+        for(int j=0;j<n;j++){
+            sum+=Math.abs(arr[i]-arr[j]);
+        }
+        result=Math.min(sum,result);
+    }
+    return result;
 }
 
 
