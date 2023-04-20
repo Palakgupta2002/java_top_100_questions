@@ -26,7 +26,8 @@ public class prepinstapattern {
     // incrementtrianglepattern( n);
     // incrementtriangleinitialised( n);
     //incrementdiamondpattern(n);
-    incrementingsquard(n);
+    // incrementingsquard(n);
+    invertedincrementsquard( n);
 
     }
     // print Square Star Pattern
@@ -374,7 +375,16 @@ public static void invertedhollowpyramid(int n) {
         System.out.println(a++);
     }
   }
-  
+  // Print Basic incrementing inverted Squared Number-Star Pattern
+  public static void invertedincrementsquard(int n) {
+    int a=n*n;
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<n;j++){
+            System.out.print((a--)+"*");
+        }
+        System.out.println(a--);
+    }
+}
   
     
 }
