@@ -11,13 +11,13 @@ public class Prepinsta4 {
             // System.out.print(getmin(Array, n));
 
            }
-        //    System.out.println("enter a number");
-        //    int n2=sc.nextInt(); 
-        //    int[] Array2 = new int[n];
-        //    for(int i=0;i<n;i++){
-        //    System.out.println("enter a array's value(positive number) ");
-        //     Array2[i]=sc.nextInt();
-        //    }
+           System.out.println("enter a number");
+           int n2=sc.nextInt(); 
+           int[] Array2 = new int[n];
+           for(int i=0;i<n;i++){
+           System.out.println("enter a array's value(positive number) ");
+            Array2[i]=sc.nextInt();
+           }
         //    largestsmallest(Array, n);
         // secondsmallestnumber(Array, n);
         // arraysum(Array, n, 0);
@@ -25,7 +25,7 @@ public class Prepinsta4 {
         // slidingreversearray(Array, n);
         // fhassshdss(n, Array);
         // sortarray(Array, n);
-    //  findfrequency(n, Array);
+        //findfrequency(n, Array);
         // longestpalindrome(Array, n);
         // countdistinctelement(Array, n);
         // findrepeateelement(Array, n);
@@ -34,7 +34,7 @@ public class Prepinsta4 {
         // maximumsubarray(Array, n);
         // System.out.println(arraysdisjoint(Array, Array2));
         // isSubset(Array, Array2, n, n2);
-        
+
         }
         //Java Program for finding the largest element of the array
         public static int getmax(int [] array,int n){
@@ -360,8 +360,11 @@ public static int summinabsdif(int arr[],int n){
     }
     return result;
 }
+//Java program to replace each element by its rank in the given array
+
+public static void sortanaarayaccording(int arr[],int arr1[]){
+  
 
 
-
-
+}
  }
