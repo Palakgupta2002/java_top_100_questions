@@ -28,7 +28,8 @@ public class prepinstapattern {
     //incrementdiamondpattern(n);
     // incrementingsquard(n);
     // invertedincrementsquard( n);
-    incrementingsquardstar(n);
+    // incrementingsquardstar(n);
+    incrementingsquardnumber( n);
 
     }
     // print Square Star Pattern
@@ -64,14 +65,13 @@ public class prepinstapattern {
                 System.out.print(" ");
             }
                 for(int k=0;k<n;k++){
-                    System.out.print("*");
-                }
             
             System.out.println("");
             
 
         }
     }
+}
     //print Mirrored Rhombus Star Pattern
     public static void mirroredrhombustar(int n) {
         int k;
@@ -410,8 +410,39 @@ public static void incrementingsquardstar(int n) {
         }
        
     }
-    
+    public static void incrementingsquardnumber(int n){
+        int i,j,m=1;
+        for(i=1; i<=n-1; i++)
+        {
+        if(i!=2)
+        {
+        for(j=1; j<n; j++){
+        System.out.print((m++)+"*");
+        }
+        System.out.print(m++);
+        System.out.println();
+        }
+        else {
+        m = m+n;
+        for(j=1; j<n; j++){
+        System.out.print((m++)+"*");
+        }
+        System.out.print(m++);
+        System.out.println();
+        }
+        }
+        for(i=n+1 ;i<(n+n);i++){
+        System.out.print(i+"*");
+        }
+        System.out.print(i);
+        System.out.println();
+        }
 }
+
+    
+    
+    
+
 
 
 
