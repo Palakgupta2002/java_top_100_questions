@@ -29,7 +29,9 @@ public class prepinstapattern {
     // incrementingsquard(n);
     // invertedincrementsquard( n);
     // incrementingsquardstar(n);
-    incrementingsquardnumber( n);
+    // incrementingsquardnumber( n);
+    // incrementingsquardnumberone(n);
+    incrementingtrianglepattern(n);
 
     }
     // print Square Star Pattern
@@ -410,6 +412,7 @@ public static void incrementingsquardstar(int n) {
         }
        
     }
+    //Basic incrementing Squared Number-Star Pattern + Basic incrementing inverted Squared Number-Star Pattern (alternate)
     public static void incrementingsquardnumber(int n){
         int i,j,m=1;
         for(i=1; i<=n-1; i++)
@@ -436,6 +439,21 @@ public static void incrementingsquardstar(int n) {
         }
         System.out.print(i);
         System.out.println();
+        }
+        //Basic incrementing Squared Number-Star Pattern + Basic incrementing inverted Squared Number-Star Pattern (alternate)
+       
+           
+        // Print Basic incrementing Triangle Pattern
+        public static void incrementingtrianglepattern(int n){
+           int count=1;
+            for (int i=0;i<n;i++){
+                for(int j=0;j<i;j++,count++){
+                    System.out.print(count+"*");
+                }
+                System.out.println();
+                
+
+            }
         }
 }
 
