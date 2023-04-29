@@ -34,6 +34,7 @@ public class Prepinsta4 {
         // maximumsubarray(Array, n);
         // System.out.println(arraysdisjoint(Array, Array2));
         // isSubset(Array, Array2, n, n2);
+        sortanaarayaccording(Array,Array2);
 
         }
         //Java Program for finding the largest element of the array
@@ -360,10 +361,25 @@ public static int summinabsdif(int arr[],int n){
     }
     return result;
 }
-//Java program to replace each element by its rank in the given array
+//Java program to Sort an array according to the order defined by another array
 
 public static void sortanaarayaccording(int arr[],int arr1[]){
-  
+  int temp[]=new int[arr.length];
+  for(int i=0;i<arr1.length;i++){
+    int key=arr1[i];
+   
+        for(int k=0;k<arr.length;k++){
+            if(arr[k]==key){
+                temp[k]=arr[k];
+            }
+
+        }
+
+    
+  }
+  for(int u=0;u<arr.length;u++){
+    System.out.print(temp[u]);
+  }
 
 
 }

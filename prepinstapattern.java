@@ -32,7 +32,8 @@ public class prepinstapattern {
     // incrementingsquardnumber( n);
     // incrementingsquardnumberone(n);
     // incrementingtrianglepattern(n);
-    inverseincrementtriangle(n);
+    // inverseincrementtriangle(n);
+    righttriangle(n);
 
     }
     // print Square Star Pattern
@@ -470,6 +471,25 @@ public static void incrementingsquardstar(int n) {
             }
         
 
+        }
+        //Print Number Star Right Triangle Pattern Type3
+        public static void righttriangle(int n){
+            int i,j,k=4,t=3,a=1;
+            for(i=1;i<=n;i++){
+                if(i%2!=0){
+                    for(j=1;j<(i-1);j++){
+                        System.out.print((a++)+"*");
+                    }
+                    System.out.println(a++);
+                }
+                else{
+                    for(j=1;j<k;j++){
+                        System.out.print((t++)+"*");
+                    }
+                    System.out.println(t++);
+                    k++;
+                }
+            }
         }
     }
     
