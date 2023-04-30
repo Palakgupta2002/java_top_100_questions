@@ -33,7 +33,7 @@ public class prepinstapattern {
     // incrementingsquardnumberone(n);
     // incrementingtrianglepattern(n);
     // inverseincrementtriangle(n);
-    righttriangle(n);
+    // righttriangle(n);
 
     }
     // print Square Star Pattern
@@ -490,6 +490,10 @@ public static void incrementingsquardstar(int n) {
                     k++;
                 }
             }
+        }
+        //  print Basic incrementing mirrored Triangle Pattern
+        public static void incrementingmethod(int n){
+
         }
     }
     
