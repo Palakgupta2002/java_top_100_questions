@@ -1,13 +1,14 @@
 import java.util.Scanner;
+
+import javax.xml.stream.events.Characters;
 public class prepinsta5 {
    
     public static void main(String[]args){
         Scanner sc=new Scanner(System.in);
         System.out.println("enter");
-        checkvowelcons('k');
-
-
-    }
+        // checkvowelcons('k');
+        ischaracter('o');
+}
     private static void checkvowelcons(char str) {
         if(str=='a' || str=='e' || str=='i' || str=='o' || str=='u' || str=='A' ||str=='E' || str=='I' || str=='O' || str=='U'){
             System.out.println("the word is vowel");
@@ -26,5 +27,18 @@ public class prepinsta5 {
        else{
         System.out.println("The word is constant");
        }
+}
+//Check whether a character is a alphabet or not
+public  static void ischaracter(char ch) {
+   char ch2= Character.toUpperCase(ch);
+    int t=ch2;
+    
+   if(t>65 && t<90){
+System.out.println("The entire character is alphabet");
+   }
+   else{
+    System.out.println("the entire charachter is not alphabet");
+   }
+    
 }
 }
