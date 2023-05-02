@@ -10,7 +10,8 @@ public class prepinsta5 {
         // calculatingasciivalue('t');
         // ischaracter('o');
         // findlength("Palak");
-        toggleachcharacter("Palak","");
+        // toggleachcharacter("Palak","");
+        countvowels("Palak Gupta");
 }
     private static void checkvowelcons(char str) {
         if(str=='a' || str=='e' || str=='i' || str=='o' || str=='u' || str=='A' ||str=='E' || str=='I' || str=='O' || str=='U'){
@@ -64,6 +65,19 @@ public static void toggleachcharacter(String str,String str1) {
        }
     }
     System.out.println(str1);
+    
+}
+//Java program to count the number of vowels in a String
+public static void countvowels(String str) {
+    int count=0;
+    for(int i=0;i<str.length();i++){
+        char ch=str.charAt(i);
+        Character.toLowerCase(ch);
+        if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+               count++;
+        }
+    }
+    System.out.println(count);
     
 }
 }
