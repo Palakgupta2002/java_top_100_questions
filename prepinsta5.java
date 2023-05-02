@@ -9,7 +9,8 @@ public class prepinsta5 {
         // checkvowelcons('k');
         // calculatingasciivalue('t');
         // ischaracter('o');
-        findlength("Palak");
+        // findlength("Palak");
+        toggleachcharacter("Palak","");
 }
     private static void checkvowelcons(char str) {
         if(str=='a' || str=='e' || str=='i' || str=='o' || str=='u' || str=='A' ||str=='E' || str=='I' || str=='O' || str=='U'){
@@ -53,4 +54,16 @@ public static void calculatingasciivalue(char ch){
     System.out.println(str.length());  
 }
 //Java program to toggle each character in a string
+public static void toggleachcharacter(String str,String str1) {
+    for(int i=0;i<str.length();i++){
+       if(Character.isUpperCase(str.charAt(i))){
+       str1=str1+ Character.toLowerCase(str.charAt(i));
+       }
+       else{
+        str1=str1+Character.toUpperCase(str.charAt(i));
+       }
+    }
+    System.out.println(str1);
+    
+}
 }
