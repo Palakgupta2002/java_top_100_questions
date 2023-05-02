@@ -7,8 +7,9 @@ public class prepinsta5 {
         Scanner sc=new Scanner(System.in);
         System.out.println("enter");
         // checkvowelcons('k');
-        calculatingasciivalue('t');
+        // calculatingasciivalue('t');
         // ischaracter('o');
+        findlength("Palak");
 }
     private static void checkvowelcons(char str) {
         if(str=='a' || str=='e' || str=='i' || str=='o' || str=='u' || str=='A' ||str=='E' || str=='I' || str=='O' || str=='U'){
@@ -47,4 +48,9 @@ public static void calculatingasciivalue(char ch){
     int ASCII=ch;
     System.out.println("The Ascii value of"+ch+"character is "+ASCII);
 }
+//Java Program to find length of the string without using length function
+ public static void findlength(String str) {
+    System.out.println(str.length());  
+}
+//Java program to toggle each character in a string
 }
