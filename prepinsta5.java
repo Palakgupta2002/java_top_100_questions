@@ -12,7 +12,8 @@ public class prepinsta5 {
         // findlength("Palak");
         // toggleachcharacter("Palak","");
         // countvowels("Palak Gupta");
-        removeconstant("Palak");
+        // removeconstant("Palak");
+        removevowel("Gupta");
 }
     private static void checkvowelcons(char str) {
         if(str=='a' || str=='e' || str=='i' || str=='o' || str=='u' || str=='A' ||str=='E' || str=='I' || str=='O' || str=='U'){
@@ -80,7 +81,7 @@ public static void countvowels(String str) {
     }
     System.out.println(count);
     }
-    //Java program to remove vowels from a string
+    //Java program to remove constant from a string
     public static void removeconstant(String str){
         String str1="";
         for(int i=0;i<str.length();i++){
@@ -93,5 +94,10 @@ public static void countvowels(String str) {
         }
         System.out.println();
     }
-
+//Java program to remove vowel from a string
+public static void removevowel(String str){
+    String str1="";
+    str1=str.replaceAll("[aeiouAEIOU]", "");
+    System.out.println(str1);
+}
 }
