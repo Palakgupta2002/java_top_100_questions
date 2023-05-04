@@ -14,7 +14,8 @@ public class prepinsta5 {
         // countvowels("Palak Gupta");
         // removeconstant("Palak");
         // removevowel("Gupta");
-        isPalindrome("palak");
+        // isPalindrome("palak");
+        reversestring("hello");
 }
     private static void checkvowelcons(char str) {
         if(str=='a' || str=='e' || str=='i' || str=='o' || str=='u' || str=='A' ||str=='E' || str=='I' || str=='O' || str=='U'){
@@ -121,4 +122,14 @@ public static void isPalindrome(String str) {
         System.out.println("The entire String is not palindrome");
     }    
 }
+//Java program to reverse a string
+public static void reversestring(String str){
+    String temp="";
+    str.toCharArray();
+    for(int i=str.length()-1;i>=0;i--){
+        temp=temp +str.charAt(i);
+    }
+    System.out.println(temp);
+}
+
 }
