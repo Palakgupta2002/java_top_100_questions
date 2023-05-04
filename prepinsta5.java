@@ -5,7 +5,7 @@ public class prepinsta5 {
    
     public static void main(String[]args){
         Scanner sc=new Scanner(System.in);
-        System.out.println("enter");
+        // System.out.println("enter");
         // checkvowelcons('k');
         // calculatingasciivalue('t');
         // ischaracter('o');
@@ -13,7 +13,8 @@ public class prepinsta5 {
         // toggleachcharacter("Palak","");
         // countvowels("Palak Gupta");
         // removeconstant("Palak");
-        removevowel("Gupta");
+        // removevowel("Gupta");
+        isPalindrome("palak");
 }
     private static void checkvowelcons(char str) {
         if(str=='a' || str=='e' || str=='i' || str=='o' || str=='u' || str=='A' ||str=='E' || str=='I' || str=='O' || str=='U'){
@@ -99,5 +100,25 @@ public static void removevowel(String str){
     String str1="";
     str1=str.replaceAll("[aeiouAEIOU]", "");
     System.out.println(str1);
+}
+//Java program to check String is a palindrome or not
+public static void isPalindrome(String str) {
+    boolean sub=true;
+    int i=0;
+    int j=str.length() - 1;
+    while(i < j){
+        if(str.charAt(i)!=str.charAt(j)){
+            sub=false;
+            break;
+        }
+        i++;
+        j--;
+    }
+    if(sub){
+        System.out.println("The entire String is palindrome");
+    }
+    else{
+        System.out.println("The entire String is not palindrome");
+    }    
 }
 }
