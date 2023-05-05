@@ -15,7 +15,8 @@ public class prepinsta5 {
         // removeconstant("Palak");
         // removevowel("Gupta");
         // isPalindrome("palak");
-        reversestring("hello");
+        // reversestring("hello");
+        removeSpecialCharacter("P9l@k");
 }
     private static void checkvowelcons(char str) {
         if(str=='a' || str=='e' || str=='i' || str=='o' || str=='u' || str=='A' ||str=='E' || str=='I' || str=='O' || str=='U'){
@@ -131,5 +132,12 @@ public static void reversestring(String str){
     }
     System.out.println(temp);
 }
-
+//Java program to remove characters in a string except alphabets
+public   static void removeSpecialCharacter(String str)
+{
+    str=str.replaceAll("[^a-zA-Z]","");
+    System.out.println(str);
+   
 }
+}
+
