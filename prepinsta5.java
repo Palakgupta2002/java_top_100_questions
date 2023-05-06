@@ -18,7 +18,8 @@ public class prepinsta5 {
         // reversestring("hello");
         // removeSpecialCharacter("P9l@k");
        // removespace("Palak Gupta ");
-       removespacesecond("palak Gupta hello");
+    //    removespacesecond("palak Gupta hello");
+       removedrackets("(a+b=c)");
 
 }
     private static void checkvowelcons(char str) {
@@ -160,6 +161,19 @@ public static void removespacesecond(String s){
        }    	
         }
     System.out.println("String after removing spaces : "+sb);
+}
+//Java program to remove brackets from an algebraic expression
+public static void removedrackets(String str){
+    char ch[]=str.toCharArray();
+    StringBuffer str1=new StringBuffer();
+    for(int i=0;i<ch.length;i++){
+        if(ch[i]!='[' && ch[i]!=']' && ch[i]!='{' && ch[i]!='}' && ch[i]!='('  && ch[i]!=')' ){
+            str1.append(ch[i]);
+
+        }
+    }
+    System.out.println(str1);
+    
 }
 }
 
