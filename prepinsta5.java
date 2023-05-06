@@ -17,7 +17,9 @@ public class prepinsta5 {
         // isPalindrome("palak");
         // reversestring("hello");
         // removeSpecialCharacter("P9l@k");
-        removespace("Palak Gupta ");
+       // removespace("Palak Gupta ");
+       removespacesecond("palak Gupta hello");
+
 }
     private static void checkvowelcons(char str) {
         if(str=='a' || str=='e' || str=='i' || str=='o' || str=='u' || str=='A' ||str=='E' || str=='I' || str=='O' || str=='U'){
@@ -146,6 +148,18 @@ public  static void removespace(String str) {
     System.out.println(str);
     
 }
-//
+//Java program to Remove spaces from a string (second method)
+public static void removespacesecond(String s){
+    char[] c = s.toCharArray();
+    StringBuffer sb = new StringBuffer();
+    
+    
+    for (int i = 0; i < c.length; i++) {
+       if( (c[i] != ' ') && (c[i]!= '\t' )) {
+           sb.append(c[i]);
+       }    	
+        }
+    System.out.println("String after removing spaces : "+sb);
+}
 }
 
