@@ -18,9 +18,9 @@ public class prepinsta5 {
         // reversestring("hello");
         // removeSpecialCharacter("P9l@k");
        // removespace("Palak Gupta ");
-    //    removespacesecond("palak Gupta hello");
-       removedrackets("(a+b=c)");
-
+       //removespacesecond("palak Gupta hello");
+       //removedrackets("(a+b=c)");
+        countsumofnumber("1df5hj6");
 }
     private static void checkvowelcons(char str) {
         if(str=='a' || str=='e' || str=='i' || str=='o' || str=='u' || str=='A' ||str=='E' || str=='I' || str=='O' || str=='U'){
@@ -174,6 +174,18 @@ public static void removedrackets(String str){
     }
     System.out.println(str1);
     
+}
+//Java Program to Count The Sum of Numbers in a String
+public static void countsumofnumber(String str){
+    int sum=0;
+    char ch[]=str.toCharArray();
+    for(int i=0;i<ch.length;i++){
+        if(Character.isDigit(ch[i])){
+            sum=sum+Character.getNumericValue(ch[i]);
+        }
+
+    }
+    System.out.println(sum);
 }
 }
 
