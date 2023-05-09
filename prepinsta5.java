@@ -20,7 +20,8 @@ public class prepinsta5 {
        // removespace("Palak Gupta ");
        //removespacesecond("palak Gupta hello");
        //removedrackets("(a+b=c)");
-        countsumofnumber("1df5hj6");
+        // countsumofnumber("1df5hj6");
+     capitalizeFirst("Palak Gupta hello");
 }
     private static void checkvowelcons(char str) {
         if(str=='a' || str=='e' || str=='i' || str=='o' || str=='u' || str=='A' ||str=='E' || str=='I' || str=='O' || str=='U'){
@@ -186,6 +187,19 @@ public static void countsumofnumber(String str){
 
     }
     System.out.println(sum);
+}
+//Java program to Capitalize the First and Last letter of Each Word of a String
+public static void capitalizeFirst(String Str) {
+    String[] str1=Str.split(" ");
+    String newstring="";
+    for(String a:str1){
+        int length=a.length();
+        String s=a.substring(0, 1);
+        String b=a.substring(1, length-1);
+        String l=a.substring(length-1);
+        newstring= newstring+s.toUpperCase()+b+l.toUpperCase()+" ";
+    }
+    System.out.println(newstring+ " ");  
 }
 }
 
