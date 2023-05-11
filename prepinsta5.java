@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 import javax.xml.stream.events.Characters;
@@ -21,7 +22,9 @@ public class prepinsta5 {
        //removespacesecond("palak Gupta hello");
        //removedrackets("(a+b=c)");
         // countsumofnumber("1df5hj6");
-     capitalizeFirst("Palak Gupta hello");
+    //  capitalizeFirst("Palak Gupta hello");
+     checkFrequency("palakpalak");
+
 }
     private static void checkvowelcons(char str) {
         if(str=='a' || str=='e' || str=='i' || str=='o' || str=='u' || str=='A' ||str=='E' || str=='I' || str=='O' || str=='U'){
@@ -199,7 +202,30 @@ public static void capitalizeFirst(String Str) {
         String l=a.substring(length-1);
         newstring= newstring+s.toUpperCase()+b+l.toUpperCase()+" ";
     }
-    System.out.println(newstring+ " ");  
+    System.out.println(newstring);  
 }
-}
-
+//Java program to check frequency of characters in a string
+public static void checkFrequency(String str) {
+    String[] freq = new String[str.length()];
+    boolean[] counted = new boolean[str.length()];
+  
+    for (int i = 0; i < str.length(); i++) {
+      int count = 0;
+      if (!counted[i]) {
+        for (int j = i + 1; j < str.length(); j++) {
+          if (str.charAt(i) == str.charAt(j)) {
+            count++;
+            counted[j] = true;
+          }
+        }
+        freq[i] = String.valueOf(str.charAt(i)) +": " +String.valueOf(count + 1);
+      }
+    }
+  
+    for (int k = 0; k < str.length(); k++) {
+      if (freq[k] != null) {
+        System.out.println(freq[k]);
+      }
+    }
+  }
+}  
