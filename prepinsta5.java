@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.concurrent.ForkJoinPool.ForkJoinWorkerThreadFactory;
 
 import javax.xml.stream.events.Characters;
 public class prepinsta5 {
@@ -23,7 +24,9 @@ public class prepinsta5 {
        //removedrackets("(a+b=c)");
         // countsumofnumber("1df5hj6");
     //  capitalizeFirst("Palak Gupta hello");
-     checkFrequency("palakpalak");
+    //  checkFrequency("palakpalak");
+    //  findnonrepeating("Palkkk");
+    findnonrepeating("care","race");
 
 }
     private static void checkvowelcons(char str) {
@@ -225,7 +228,42 @@ public static void checkFrequency(String str) {
     for (int k = 0; k < str.length(); k++) {
       if (freq[k] != null) {
         System.out.println(freq[k]);
+         }
+    }
+    
+
+  }
+  //Java program to Find First non repeating character in a String
+  public static void findnonrepeating(String str1,String str2){
+      
+    str1 = str1.toLowerCase();
+    str2 = str2.toLowerCase();
+
+    // check if length is same
+    if(str1.length() == str2.length()) {
+
+      // convert strings to char array
+      char[] charArray1 = str1.toCharArray();
+      char[] charArray2 = str2.toCharArray();
+
+      // sort the char array
+      Arrays.sort(charArray1);
+      Arrays.sort(charArray2);
+
+      // if sorted char arrays are same
+      // then the string is anagram
+      boolean result = Arrays.equals(charArray1, charArray2);
+
+      if(result) {
+        System.out.println(str1 + " and " + str2 + " are anagram.");
+      }
+      else {
+        System.out.println(str1 + " and " + str2 + " are not anagram.");
       }
     }
+    else {
+      System.out.println(str1 + " and " + str2 + " are not anagram.");
+    }
   }
-}  
+} 
+  
