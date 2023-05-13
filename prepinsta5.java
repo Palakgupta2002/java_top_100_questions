@@ -26,7 +26,8 @@ public class prepinsta5 {
     //  capitalizeFirst("Palak Gupta hello");
     //  checkFrequency("palakpalak");
     //  findnonrepeating("Palkkk");
-    findnonrepeating("care","race");
+    // findnonrepeating("care","race");
+    //    nonrepeatingString("prepinsta");
 
 }
     private static void checkvowelcons(char str) {
@@ -209,6 +210,7 @@ public static void capitalizeFirst(String Str) {
 }
 //Java program to check frequency of characters in a string
 public static void checkFrequency(String str) {
+    str.toLowerCase();
     String[] freq = new String[str.length()];
     boolean[] counted = new boolean[str.length()];
   
@@ -234,6 +236,32 @@ public static void checkFrequency(String str) {
 
   }
   //Java program to Find First non repeating character in a String
+  public static void nonrepeatingString(String str){
+    String[] freq = new String[str.length()];
+    boolean[] counted = new boolean[str.length()];
+    str=str.toLowerCase();
+    for (int i = 0; i < str.length(); i++) {
+      int count = 1;
+      if (!counted[i]) {
+        for (int j = i + 1; j < str.length(); j++) {
+          if (str.charAt(i) == str.charAt(j)) {
+            count++;
+            counted[j] = true;
+          }
+        }
+        if(count==1){
+        freq[i] = String.valueOf(str.charAt(i)) +": " +String.valueOf(count);
+        }
+      }
+    }
+  
+    for (int k = 0; k < str.length(); k++) {
+      if (freq[k] != null) {
+        System.out.println(freq[k]);
+         }
+    }
+
+  }
   public static void findnonrepeating(String str1,String str2){
       
     str1 = str1.toLowerCase();
@@ -265,5 +293,9 @@ public static void checkFrequency(String str) {
       System.out.println(str1 + " and " + str2 + " are not anagram.");
     }
   }
+  //Java Program to Replace Substring in a String
+  public static void replacesubstring(String str){
+    
+}
 } 
   
