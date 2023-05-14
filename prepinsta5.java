@@ -28,6 +28,7 @@ public class prepinsta5 {
     //  findnonrepeating("Palkkk");
     // findnonrepeating("care","race");
     //    nonrepeatingString("prepinsta");
+    replacesubstring("This is Prepnsta","The");
 
 }
     private static void checkvowelcons(char str) {
@@ -294,7 +295,16 @@ public static void checkFrequency(String str) {
     }
   }
   //Java Program to Replace Substring in a String
-  public static void replacesubstring(String str){
+  public static void replacesubstring(String str,String word){
+    String msg[]=str.split(" ");
+    String new_str="";
+    for(String words:msg){
+      if(!words.equals(word)){
+        new_str+=word+"";
+        System.out.println(words);
+      }
+    }
+    System.out.println(new_str);
     
 }
 } 
