@@ -18,8 +18,8 @@ public class prepinsta3 {
         //     Array[i]=sc.nextInt();
             
         //    }
-        System.out.println("enter a number1");
-        int n=sc.nextInt(); 
+        // System.out.println("enter a number1");
+        // int n=sc.nextInt(); 
         //    char[] str = new char[n*2];
           
          
@@ -39,7 +39,8 @@ public class prepinsta3 {
 // Lastnonzerofactorial(number1);
 // parscalprint(number1);
 // generatecomb(n, str, 0, 0, 0);
-System.out.print(factorial(n));
+// System.out.print(factorial(n));
+printBinaryNumbers(4, 0, 0, "");
 
 
     }
@@ -236,7 +237,22 @@ public  static int factorial(int n)
 
     return n * factorial(n - 1);
 }
-//Find all possible Palindromic Partitions of the given String in Java
+
+public static void printBinaryNumbers(int n, int ones, int zeros, String currentNumber) {
+   
+    if (n == 0) {
+        System.out.println(currentNumber);
+        return;
+    }
+
+   
+    if (ones > zeros) {
+       
+        printBinaryNumbers(n-1, ones + 1, zeros, currentNumber + "1");
+    }
+
+    printBinaryNumbers(n-1, ones, zeros + 1, currentNumber + "0");
+}
 
 }
       

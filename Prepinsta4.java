@@ -11,13 +11,13 @@ public class Prepinsta4 {
             // System.out.print(getmin(Array, n));
 
            }
-           System.out.println("enter a number");
-           int n2=sc.nextInt(); 
-           int[] Array2 = new int[n];
-           for(int i=0;i<n;i++){
-           System.out.println("enter a array's value(positive number) ");
-            Array2[i]=sc.nextInt();
-           }
+// System.out.println("enter a number");
+//            int n2=sc.nextInt(); 
+//            int[] Array2 = new int[n];
+//                       for(int i=0;i<n;i++){
+//            System.out.println("enter a array's value(positive number) ");
+//             Array2[i]=sc.nextInt();
+//            }
         //    largestsmallest(Array, n);
         // secondsmallestnumber(Array, n);
         // arraysum(Array, n, 0);
@@ -34,7 +34,8 @@ public class Prepinsta4 {
         // maximumsubarray(Array, n);
         // System.out.println(arraysdisjoint(Array, Array2));
         // isSubset(Array, Array2, n, n2);
-        sortanaarayaccording(Array,Array2);
+        // sortanaarayaccording(Array,Array2);
+        replacebyrank(Array);
 
         }
         //Java Program for finding the largest element of the array
@@ -381,6 +382,21 @@ public static void sortanaarayaccording(int arr[],int arr1[]){
     System.out.print(temp[u]);
   }
 
+
+}
+//Java program to replace each element by its rank in the given array
+public static void replacebyrank(int arr[]){
+    int copyary[]=Arrays.copyOfRange(arr, 0, arr.length);
+    Arrays.sort(copyary);
+    for(int i=0;i<copyary.length;i++){
+        for(int j=0;j<copyary.length;j++){
+            if(copyary[j]==arr[i]){
+                arr[i]=j+1;
+                break;
+            }
+        }
+    }
+    System.out.println(Arrays.toString(arr));
 
 }
  }
