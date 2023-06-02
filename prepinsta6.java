@@ -2,8 +2,10 @@ import java.util.Arrays;
 
 public class prepinsta6 {
     public static void main(String[]args){
-        int arr[]={0,1,0,2,0,1,0,2};
-        sortarray(arr);
+        // int arr[]={0,1,0,2,0,1,0,2};
+        // sortarray(arr);
+        int ary[]={8,4,-6,4};
+        movenegative(ary);
 
     }
     //Given an array which consists of only 0, 1 and 2. Sort the array without using any  algorithm
@@ -44,5 +46,21 @@ public class prepinsta6 {
 public static void kthmaxmin(int arr[]){
     
 }
+//Move all the negative elements to one side of the array in Java
+public static void movenegative(int ary[]){
+    int temp=0;
+    int j=0;
+    for(int i=0;i<ary.length;i++){
+       if(ary[i]<0){
+        temp=ary[i];
+        ary[i]=ary[j];
+        ary[j]=temp;
+        j++;
+ }
+       
+    }
+    System.out.println(Arrays.toString(ary));
+}
+
     
 }
