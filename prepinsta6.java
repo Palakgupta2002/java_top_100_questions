@@ -1,11 +1,16 @@
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class prepinsta6 {
     public static void main(String[]args){
         // int arr[]={0,1,0,2,0,1,0,2};
         // sortarray(arr);
-        int ary[]={8,4,-6,4};
-        movenegative(ary);
+        // int ary[]={8,4,-6,4};
+        // movenegative(ary);
+        int ary[]={1,1,5,6,4};
+        int ary1[]={9,5,5,7,3};
+        unionintersection(ary, ary1);
 
     }
     //Given an array which consists of only 0, 1 and 2. Sort the array without using any  algorithm
@@ -61,6 +66,53 @@ public static void movenegative(int ary[]){
     }
     System.out.println(Arrays.toString(ary));
 }
+//Find the Union and Intersection of the two sorted arrays in Java
+public static void unionintersection(int ary[],int ary1[]){
+ArrayList<Integer> list=new ArrayList<>();
+int left=0;
+int right=0;
+while(left<ary.length || right<ary1.length){
+    //Skip Duplicate
+    while(left>0 && left<ary.length && ary[left]==ary[left-1]){
+      left++;
+    }
+    while(right>0 && right<ary1.length && ary1[right]==ary1[right-1]){
+        right++;
+    }
+    //one reach ary
+    if(left>=ary.length){
+        list.add(ary1[right]);
+        right++;
+        continue;
+    }
+    if(right>=ary1.length){
+        list.add(ary[left]);
+        left++;
+        continue;
+    }
+//comparision
+    if(ary[left]<ary1[right] ){
+        list.add(ary[left]);
+        left++;
+    }
+    else  if(ary1[right]<ary[left]){
+        list.add(ary1[right]);
+        right++;
+    }
+    else{
+        list.add(ary[left]);
+        left++;
+        right++;
+    }
+}
+
+System.out.println(list);
+
+}
+
+
+ 
+
 
     
 }
