@@ -83,8 +83,21 @@ public static void union(int arr[],int arr1[]){
         }
     }
 
-    System.out.println(list);
+    System.out.println(list);    
+}
+public static void Intersection(int[] arr, int[] arr1) {
+    ArrayList<Integer> list = new ArrayList<>();
 
-    
+    // Iterate through arr and check if each element is present in arr1
+    for (int i = 0; i < arr.length; i++) {
+        for (int j = 0; j < arr1.length; j++) {
+            if (arr[i] == arr1[j] && !list.contains(arr[i])) {
+                list.add(arr[j]);
+                break; // Break inner loop if a match is found to avoid duplicates
+            }
+        }
+    }
+
+    System.out.println(list);
 }
 }
