@@ -101,4 +101,18 @@ public static void Intersection(int[] arr, int[] arr1) {
 
     System.out.println(list);
 }
+//Largest Sum Contiguous SubArray in Java
+public static void largestsum(int arr[]){
+    int res=Integer.MIN_VALUE;
+    for(int i=0;i<arr.length;i++){
+        int sum=0;
+        for(int j=i;j<arr.length;j++){
+            sum+=arr[j];
+            res=Math.min(sum,res);
+
+        }
+
+    }
+    System.out.println(res);
+}
 }
