@@ -9,9 +9,12 @@ public class prepinsta6 {
         // int ary[]={8,4,-6,4};
         // movenegative(ary);
         int ary[]={1,1,5,6,4};
-        int ary1[]={9,5,5,6,3};
+        int ary1[]={9,5,5,6,-3};
+        int k=3;
         // union(ary1, ary);
-        Intersection( ary, ary1);
+        // Intersection( ary, ary1);
+        // largestsum(ary1);
+        minmaxdiff(ary1, k);
        
 
     }
@@ -108,11 +111,27 @@ public static void largestsum(int arr[]){
         int sum=0;
         for(int j=i;j<arr.length;j++){
             sum+=arr[j];
-            res=Math.min(sum,res);
+            res=Math.max(sum,res);
 
         }
 
     }
     System.out.println(res);
+}
+//Minimize the maximum difference between heights in Java
+public static void minmaxdiff(int arr[],int k){
+    Arrays.sort(arr);
+    int n=arr.length;
+    int diff=arr[n-1]-arr[0];
+    int max;
+    int min;
+    
+    for (int i=0;i<n;i++){
+        if(arr[i]-k<0)continue;
+         max=Math.max(arr[i-1]+k,arr[n-1]-k);
+         min=Math.min(arr[i]-k, arr[0]+k);
+         diff=Math.min(diff,max-min);
+    }
+    System.out.println(diff);
 }
 }
