@@ -9,12 +9,13 @@ public class prepinsta6 {
         // int ary[]={8,4,-6,4};
         // movenegative(ary);
         int ary[]={1,1,5,6,4};
-        int ary1[]={9,5,5,6,-3};
+        int ary1[]={2,3,1,1,4};
         int k=3;
         // union(ary1, ary);
         // Intersection( ary, ary1);
         // largestsum(ary1);
-        minmaxdiff(ary1, k);
+        // minmaxdiff(ary1, k);
+        System.out.println(minjump(ary1));
        
 
     }
@@ -133,5 +134,22 @@ public static void minmaxdiff(int arr[],int k){
          diff=Math.min(diff,max-min);
     }
     System.out.println(diff);
+}
+//Java Program To Find Minimum No. of Jumps to Reach The End of an Array
+public static int minjump(int arr[]){
+    int jum=0;
+    int des=0;
+    int pos=0;
+    if(arr.length==0)
+    return -1;
+    for(int i=0;i<arr.length-1;i++){
+        des=Math.max(des, arr[i]+1);
+        if(pos==i){
+            pos=des;
+            jum++;
+        }
+    }
+    return jum;
+
 }
 }
