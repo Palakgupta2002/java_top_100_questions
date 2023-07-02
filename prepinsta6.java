@@ -8,15 +8,16 @@ public class prepinsta6 {
         // sortarray(arr);
         // int ary[]={8,4,-6,4};
         // movenegative(ary);
-        int ary[]={1,1,5,6,4};
-        int ary1[]={2,3,1,1,4};
+        int ary1[]={1,3,5,7};
+        int ary2[]={0,2,4,6,8,9};
         int k=3;
         // union(ary1, ary);
         // Intersection( ary, ary1);
         // largestsum(ary1);
         // minmaxdiff(ary1, k);
         // System.out.println(minjump(ary1));
-        finddup(ary1);
+        // finddup(ary1);
+        mergetwosorted(ary1, ary2);
        
 
     }
@@ -164,5 +165,36 @@ public static void finddup(int arr[]){
    } 
 
     
+}
+//Program to Merge two sorted arrays without using Extra space in Java
+public static void mergetwosorted(int arr1[],int arr2[]){
+    int n=arr1.length;
+    int m=arr2.length;
+    int i=0;
+    int j=0;
+    while(i<n){
+        if(arr1[i]>arr2[j]){
+            //swap the program
+            int temp=arr1[i];
+            arr1[i]=arr2[j];
+            arr2[j]=temp;
+            sortedarr2(arr2);
+
+
+        }
+        i++;
+    }
+    System.out.println(Arrays.toString(arr1)+Arrays.toString(arr2));
+}
+//This is a helping function of mergesorted array
+public static void sortedarr2(int arr2[]){
+    for(int i=0;i<arr2.length-1;i++){
+        if(arr2[i]>arr2[i+1]){
+            int temp=arr2[i+1];
+            arr2[i+1]=arr2[i];
+            arr2[i]=temp;
+
+        }
+    }
 }
 }
