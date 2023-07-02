@@ -197,4 +197,8 @@ public static void sortedarr2(int arr2[]){
         }
     }
 }
+//Java program for Kadane’s Algorithm
+public static void Kadanesalgo(int arr[]){
+    
+}
 }
