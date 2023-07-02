@@ -15,7 +15,8 @@ public class prepinsta6 {
         // Intersection( ary, ary1);
         // largestsum(ary1);
         // minmaxdiff(ary1, k);
-        System.out.println(minjump(ary1));
+        // System.out.println(minjump(ary1));
+        finddup(ary1);
        
 
     }
@@ -151,5 +152,17 @@ public static int minjump(int arr[]){
     }
     return jum;
 
+}
+//find duplicate in an array of N+1 Integers in java
+public static void finddup(int arr[]){
+   for(int i=0;i<arr.length-1;i++){
+    for(int j=i+1;j<arr.length-1;j++){
+        if(arr[i]==arr[j]){
+            System.out.println(arr[i]);
+        }
+    }
+   } 
+
+    
 }
 }
