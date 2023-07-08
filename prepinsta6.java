@@ -1,6 +1,5 @@
 import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 public class prepinsta6 {
     public static void main(String[]args){
@@ -8,16 +7,20 @@ public class prepinsta6 {
         // sortarray(arr);
         // int ary[]={8,4,-6,4};
         // movenegative(ary);
-        int ary1[]={1,3,5,7};
-        int ary2[]={0,2,4,6,8,9};
-        int k=3;
+        // int ary1[]={1,3,5,7};
+        // int ary2[]={0,2,4,6,8,9};
+        // int k=3;
         // union(ary1, ary);
+         int[][] array = {{1,2},{3,6},{4,8}  };
+
+        
         // Intersection( ary, ary1);
         // largestsum(ary1);
         // minmaxdiff(ary1, k);
         // System.out.println(minjump(ary1));
         // finddup(ary1);
-        mergetwosorted(ary1, ary2);
+        // mergetwosorted(ary1, ary2);
+     merge(array);
        
 
     }
@@ -201,4 +204,33 @@ public static void sortedarr2(int arr2[]){
 public static void Kadanesalgo(int arr[]){
     
 }
+//Java Program for Merge intervals
+//(1,3),(2,6)=(1,6)
+ public static void merge(int[][] intervals) {
+        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+        Stack<int[]> stack = new Stack<>();
+
+        stack.push(intervals[0]);
+        for (int i = 1; i < intervals.length; i++) {
+            int startpoint2 = intervals[i][0];
+            int endpoint2 = intervals[i][1];
+            int[] poparray = stack.pop();
+            int startpoint1 = poparray[0];
+            int endpoint1 = poparray[1];
+            int endmax = Math.max(endpoint1, endpoint2);
+            if (endpoint1 >= startpoint2) {
+                int[] merge = new int[] { startpoint1, endmax };
+                stack.push(merge);
+            } else {
+                stack.push(poparray);
+                stack.push(intervals[i]);
+            }
+        }
+
+        System.out.println("Merged intervals:");
+        while (!stack.isEmpty()) {
+            int[] element = stack.pop();
+            System.out.println(Arrays.toString(element));
+        }
+    }
 }
