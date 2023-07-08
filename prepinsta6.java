@@ -7,11 +7,11 @@ public class prepinsta6 {
         // sortarray(arr);
         // int ary[]={8,4,-6,4};
         // movenegative(ary);
-        // int ary1[]={1,3,5,7};
+        int ary1[]= {8, 4, 2, 1};
         // int ary2[]={0,2,4,6,8,9};
         // int k=3;
         // union(ary1, ary);
-         int[][] array = {{1,2},{3,6},{4,8}  };
+        //  int[][] array = {{1,2},{3,6},{4,8}  };
 
         
         // Intersection( ary, ary1);
@@ -20,7 +20,9 @@ public class prepinsta6 {
         // System.out.println(minjump(ary1));
         // finddup(ary1);
         // mergetwosorted(ary1, ary2);
-     merge(array);
+        //  merge(array);
+        countinvrsion(ary1);
+
        
 
     }
@@ -233,4 +235,17 @@ public static void Kadanesalgo(int arr[]){
             System.out.println(Arrays.toString(element));
         }
     }
+    //Java program for count inversion
+    public static void countinvrsion(int arr[]){
+        int count=0;
+        for(int i=0;i<arr.length-1;i++){
+            for(int  j=i+1;j<arr.length;j++){
+                if(arr[i]>arr[j]){
+                    count++;
+                }
+            }
+        }
+        System.out.println(count);
+    }
+
 }
