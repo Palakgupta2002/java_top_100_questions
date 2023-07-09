@@ -9,6 +9,7 @@ public class prepinsta6 {
         // movenegative(ary);
         // int ary1[]= {8, 4, 2, 1};
         int arr[]={7, 1, 5, 3, 6, 4};
+        int sum=8;
         // int ary2[]={0,2,4,6,8,9};
         // int k=3;
         // union(ary1, ary);
@@ -21,7 +22,9 @@ public class prepinsta6 {
         // mergetwosorted(ary1, ary2);
         //  merge(array);
         // countinvrsion(ary1);
-        buysell(arr);
+        // buysell(arr);
+        sumequal(arr, sum);
+
 
        
 
@@ -285,6 +288,37 @@ public static void Kadanesalgo(int arr[]){
        }
        System.out.println("Your profit is "+profit);
        
+    }
+    //Program to find all pairs on integer array whose sum is equal to given number in java
+    public static void sumequal(int arr[], int sum){
+        //use case
+        //case 1 if there is no value in array
+        if(arr.length-1==0){
+            System.out.println("There is none value");
+        }
+        //case 2 if there is only one values in array
+        if(arr.length-1==1){
+            if(arr[0]==sum){
+                System.out.println("This is not pair"+arr[0]);
+            }
+        }
+        //case 3 if there is only two values 
+        if(arr.length-1==2){
+            if(arr[0]+arr[1]==sum){
+                System.out.println("The pair is"+ "(" + arr[0]+ ","+arr[1]+")");
+            }
+        }
+        //case 4 if there is more values than two
+        if(arr.length-1>=3){
+            for(int i=0;i<arr.length-1;i++){
+                for(int j=i+1;j<arr.length-1;j++){
+                    if(arr[i]+arr[j]==sum){
+                        System.out.println("("+arr[i]+","+arr[j]+")");
+                    }
+                }
+            }
+        }
+
     }
 
 }
