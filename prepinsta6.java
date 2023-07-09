@@ -7,13 +7,12 @@ public class prepinsta6 {
         // sortarray(arr);
         // int ary[]={8,4,-6,4};
         // movenegative(ary);
-        int ary1[]= {8, 4, 2, 1};
+        // int ary1[]= {8, 4, 2, 1};
+        int arr[]={7, 1, 5, 3, 6, 4};
         // int ary2[]={0,2,4,6,8,9};
         // int k=3;
         // union(ary1, ary);
         //  int[][] array = {{1,2},{3,6},{4,8}  };
-
-        
         // Intersection( ary, ary1);
         // largestsum(ary1);
         // minmaxdiff(ary1, k);
@@ -21,7 +20,8 @@ public class prepinsta6 {
         // finddup(ary1);
         // mergetwosorted(ary1, ary2);
         //  merge(array);
-        countinvrsion(ary1);
+        // countinvrsion(ary1);
+        buysell(arr);
 
        
 
@@ -246,6 +246,45 @@ public static void Kadanesalgo(int arr[]){
             }
         }
         System.out.println(count);
+    }
+    //Best time to buy and Sell stock in java
+    public static void buysell(int arr[]){
+    
+        int sell;
+        int index;
+        int buy=arr[0];
+        int profit=0;
+        //if there is only one value
+        if(arr.length-1==0){
+            System.out.println("There is no stock");
+
+        }
+        //if there is only one value
+        if(arr.length-1==1){
+            System.out.println("You can buy ,but we are not assure in future this is safe or not");
+        } 
+        // if there is only two values
+        if(arr.length-1==2){
+            if(arr[0]<arr[1]){
+                System.out.println("this is best time to buy it");
+            }
+            else{
+                System.out.println("This is not safe");
+            }
+        }
+        //This is for 3 or more
+       if(arr.length-1>=3){
+        for(int i=0;i<arr.length-2;i++){
+            buy=Math.min(arr[i],buy);
+            if(arr[i+1]>buy){
+                profit=Math.max(profit,arr[i+1]-buy);
+
+            }
+        }
+    
+       }
+       System.out.println("Your profit is "+profit);
+       
     }
 
 }
