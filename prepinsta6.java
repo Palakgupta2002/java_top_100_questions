@@ -8,8 +8,9 @@ public class prepinsta6 {
         // int ary[]={8,4,-6,4};
         // movenegative(ary);
         // int ary1[]= {8, 4, 2, 1};
-        int arr[]={7, 1, 5, 3, 6, 4};
-        int sum=8;
+        // int arr[]={7, 1, 5, 3, 6, 4};
+        // int sum=8;
+        int[] arr1 = {4, 2, -3, 1, 6};
         // int ary2[]={0,2,4,6,8,9};
         // int k=3;
         // union(ary1, ary);
@@ -23,8 +24,8 @@ public class prepinsta6 {
         //  merge(array);
         // countinvrsion(ary1);
         // buysell(arr);
-        sumequal(arr, sum);
-
+        // sumequal(arr, sum);
+System.out.print(findsunarraysum(arr1));
 
        
 
@@ -320,5 +321,25 @@ public static void Kadanesalgo(int arr[]){
         }
 
     }
+    //Java Program to Find if there is any subarray with sum equal to 0
+    public static boolean findsunarraysum(int arr[]){
+       
+        for(int i=0;i<arr.length-1;i++){
+            
+                int sum=0;
+                for (int j=i;j<arr.length-1;j++){
+                    sum=sum+arr[j];
+                    if(sum==0){
+                      return true;
+                     
+                    }
+                    
+                    }
+                }
+                
+                return false;
+        
+    }
+
 
 }
