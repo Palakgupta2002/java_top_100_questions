@@ -1,10 +1,14 @@
 import java.lang.reflect.Array;
-import java.util.ArrayList;
+import java.util.*;
 
 public class day2 {
     public static void main(String[] args) {
         // permutation(5, 9);
-        printpermutations("palak", "");
+        // printpermutations("palak", "");
+        int arr[] = { 121, 5555, 6666, 777, 121, 5555 };
+        // System.out.println(longestpalindrome(arr));
+        // repeting(arr);
+        nonrepet(arr);
 
     }
 
@@ -191,8 +195,187 @@ public class day2 {
 
         return n * factorial(n - 1);
     }
+
     // #16
     // Sort first in ascending order and second half in descending
-    
+    public static void assendesc(int a[], int n) {
+        int temp;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < n / 2; j++) {
+                if (a[j] > a[j + 1]) {
+                    temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
+
+            for (int j = n / 2; j < n - 1; j++) {
+                if (a[j] < a[j + 1]) {
+                    temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
+        }
+
+        for (int i = 0; i < n; i++)
+            System.out.print(a[i] + " ");
+
+    }
+
+    // 17
+    // Sort the element
+    public static void sortarray(int arr[]) {
+        Arrays.sort(arr);
+    }
+
+    // 18
+    // Finding the Longest Palindrome in an Array
+    public static int maximum(int prev, int curr) {
+        if (prev < curr) {
+            return curr;
+        }
+        return prev;
+    }
+
+    public static boolean ispalindrome(int num) {
+        int num1 = num;
+        int revrser = 0;
+        while (num != 0) {
+            int temp = num % 10;
+            revrser = 10 * revrser + temp;
+            num = num / 10;
+        }
+        if (revrser == num1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static int longestpalindrome(int arr[]) {
+        // we need two function
+        // ispalindome
+        // maximum no.
+        int max = 0;
+        for (int i = 0; i < arr.length; i++)
+            if (ispalindrome(arr[i]))
+                max = maximum(max, arr[i]);
+
+        return max;
+    }
+
+    // 19
+    public static void countfreq(int arr[], int n) {
+        boolean visited[] = new boolean[n];
+        Arrays.fill(visited, false);
+        int count_dis = 0;
+        for (int i = 0; i < n; i++) {
+            if (visited[i] == true) {
+                continue;
+            }
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] == arr[j]) {
+                    visited[j] = true;
+                }
+
+            }
+            count_dis = count_dis + 1;
+        }
+        System.out.println(count_dis);
+
+    }
+
+    // 20
+    // Find rpeting elements in an array
+    public static void repeting(int arr[]) {
+        int n = arr.length;
+        boolean visited[] = new boolean[n];
+        Arrays.fill(visited, false);
+        for (int i = 0; i < n; i++) {
+            if (visited[i] == true)
+                continue;
+            int count = 1;
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] == arr[j]) {
+                    visited[j] = true;
+                    count++;
+                }
+            }
+            if (count != 1) {
+                System.out.println(arr[i]);
+            }
+        }
+
+    }
+    // #21
+    public static void nonrepeting(int arr[]){
+        int n=arr.length;
+        boolean visited[]=new boolean[n];
+        Arrays.fill(visited,false);
+        for(int i=0;i<n;i++){
+            if(visited[i]==true)
+            continue;
+            int count=1;
+            for(int j=i+1;j<n;j++){
+                if(arr[i]==arr[j])
+                visited[j]=true;
+                count++;
+            }
+            if(count==1)
+            System.out.println(arr[i]+" ");
+        }
+    }
+    //#22
+    //Removing non repeting number
+    public static void nonrepet(int arr[]){
+        int n=arr.length;
+        HashSet hashset=new HashSet();
+        for(int i=0;i<n;i++){
+            hashset.add(arr[i]);
+        }
+        System.out.println(hashset);
+    }
+    //#23
+    public static void minimumscalar(int arr[],int arr1[]){
+        Arrays.sort(arr);
+        Arrays.sort(arr1);
+        int i=0;
+        int j=arr1.length-1;
+        int sum=0;
+
+        while(i!=arr.length){
+          sum+=arr[i]*arr1[j];
+          i++;
+          j--;
+        }
+        System.out.println(sum);
+    }
+    //#24
+    //Counting element odd or even 
+    public static void oddeven(int arr[]){
+        int even=0;
+        int odd=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]%2==0){
+                even++;
+
+            }
+            odd++;
+        }
+        System.out.println("Even"+even+"odd"+odd);
+    }
+    //#25
+    public static void Symentricpair(int arr[][]){
+        for(int i=0;i<arr.length;i++){
+            for (int j = i + 1; j < 5; j++)
+            {
+	            if (arr[i][0] == arr[j][1] && arr[i][1] == arr[j][0])
+	                System.out.println("(" + arr[i][0] + ", " + arr[i][1] + ")");
+	        }
+
+        }
+    }
+
 
 }
